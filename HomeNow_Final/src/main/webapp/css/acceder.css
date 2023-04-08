@@ -1,0 +1,12 @@
+.mt{
+    margin-top: 10;
+  }
+
+
+.form-control{
+	display: flex;
+	
+}
+.sizeDiv{
+	width:40vw;
+}
