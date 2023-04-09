@@ -1,3 +1,4 @@
+<%@ include file ="header.jsp" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,9 +14,10 @@
     <!--CSSp personal-->
     <link href="css/acceder.css" rel="stylesheet">
 <title>Acceder</title>
+
 </head>
 <body>
-<%@ include file ="header.jsp" %>
+
 
 
  <!--Main-->
@@ -25,7 +27,7 @@
                 <div class="card-body">
                     <div class="row m-3">
                         <div class="col -md-6 bg-login-image m-auto">
-                            <img src="img/logo.jpg" class="img-fluid "  alt="">
+                            <img src="/HomeNow_Final/img/logo.jpg" class="img-fluid "  alt="Logo acceder">
                         </div>
                         <div class="col -md-6 text-center">
                             <h1 class="h4 text-gray-900 my-3">Bienvenido</h1>
@@ -43,8 +45,8 @@
                                 <br>
                                 <br>
                                 <div class="text-center">
-                                    <a href="userRegistro.jps">¿Aún no tienes cuenta? Regístrate</a><br>
-                                    <a href="perfil.jps">Ir a perfil</a>
+                                    <a href="/HomeNow_Final/jsp/userRegistro.jsp">¿Aún no tienes cuenta? Regístrate</a><br>
+                                    <a href="/HomeNow_Final/jsp/perfil.jsp">Ir a perfil</a>
                                 </div>
                                 
                             </form>
@@ -60,7 +62,7 @@
 
       <!--Main-->
 
-<%@ include file ="footer.jsp" %>
-</body>
 
+</body>
+<%@ include file ="footer.jsp" %>
 </html>

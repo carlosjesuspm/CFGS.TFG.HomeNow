@@ -1,22 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
- <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--CSS Boostrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-    <!--CSSp personal-->
-    <link href="css/publicar.css" rel="stylesheet">
-    
-<title>Publicar</title>
-</head>
-<body>
 <%@ include file ="header.jsp" %>
+<title>Publicar</title>
+<body>
+
 
 
 <!--Main-->
@@ -29,16 +14,16 @@
                 <select class="form-select" aria-label="Default select example">
                     <option selected value="casa">Casa</option>
                     <option value="piso">Piso</option>
-                    <option value="habitacion">HabitaciÃ³n</option>
+                    <option value="habitacion">Habitación</option>
                 </select>
                 <label for="superficie" class="form-label mt-3 mb-3 fw-bold ">Superficie</label>
-                <input type="text" class="form-control" id="superficie" placeholder="Indique extensiÃ³n">
+                <input type="text" class="form-control" id="superficie" placeholder="Indique extensión">
             </div>
 
             <br>
 
 
-            <h3>DirecciÃ³n</h3>
+            <h3>Dirección</h3>
             <div class="container mb-3">
                 <div class="row aling-items-start fw-bold ">
                     <div class="col">
@@ -51,7 +36,7 @@
                             <input type="text" class="form-control" id="localidad">
                             </div>
                             <div class="mb-3">
-                                <label for="numero" class="form-label">NÃºmero</label>
+                                <label for="numero" class="form-label">Número</label>
                                 <input type="number" min="0" class="form-control" id="numero">
                             </div>
                             <div class="mb-3">
@@ -71,7 +56,7 @@
                             
                         </div>
                         <div class="mb-3">
-                            <label for="codigo-postal" class="form-label">CÃ³digo Postal</label>
+                            <label for="codigo-postal" class="form-label">Código Postal</label>
                             <input type="number" min="1" class="form-control" id="codigo-postal">
                             
                         </div>
@@ -89,7 +74,7 @@
                 </select>
             </div>
 
-            <h3>BaÃ±os</h3>
+            <h3>Baños</h3>
             <div class="mt-3 mb-3 w-25">
                 <select class="form-select" aria-label="Default select example">
                     <option selected value="1">1</option>
@@ -97,24 +82,24 @@
                 </select>
             </div>
 
-            <h3>ImÃ¡genes</h3>
+            <h3>Imágenes</h3>
             <div class="mb-3">
-                <label for="formFileMultiple" class="form-label fw-bold">Seleccione el conjunto de imÃ¡genes del inmueble</label>
+                <label for="formFileMultiple" class="form-label fw-bold">Seleccione el conjunto de imágenes del inmueble</label>
                 <input class="form-control w-25" type="file" id="formFileMultiple" multiple>
             </div>
 
-            <h3>DescripciÃ³n</h3>
+            <h3>Descripción</h3>
                 <div class="form-floating mt-3 mb-3 w-25">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Comenta aquÃ­</label>
+                    <label for="floatingTextarea">Comenta aquí</label>
                 </div>
             <button type="submit" class="btn btn-primary">Publicar</button>
         </form>
     </div>
 
     <!--Main-->
-<%@ include file ="footer.jsp" %>
+
 
 </body>
-
+<%@ include file ="footer.jsp" %>
 </html>

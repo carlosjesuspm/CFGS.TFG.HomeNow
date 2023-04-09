@@ -19,39 +19,41 @@
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
         <div class="container-fluid">
-          <a class="navbar-brand" href="jsp/main.jps"><img src="img/logo.jpg" class="img-fluid" alt="Logo HomeNow" width="125" height="50"></a>
+          <a class="navbar-brand" href="/HomeNow_Final/index.jsp"><img src="/HomeNow_Final/img/logo.jpg" class="img-fluid" alt="Logo HomeNow" width="125" height="50"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="jsp/comprar.jsp">Comprar</a>
+                    <a class="nav-link" href="/HomeNow_Final/jsp/comprar.jsp">Comprar</a>
                 </li>	
                 <li class="nav-item">
-                    <a class="nav-link" href="jsp/compartir.jsp">Compartir</a>
+                    <a class="nav-link" href="/HomeNow_Final/jsp/compartir.jsp">Compartir</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="jsp/alquilar.jsp">Alquiler</a>
+                    <a class="nav-link" href="/HomeNow_Final/jsp/alquilar.jsp">Alquilar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="jsp/favoritos.jsp">Favoritos</a>
+                    <a class="nav-link" href="/HomeNow_Final/jsp/favoritos.jsp">Favoritos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="jsp/publicar.jsp">Publicar</a>
+                    <a class="nav-link" href="/HomeNow_Final/jsp/publicar.jsp">Publicar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="jsp/contacto.jsp">Contacto</a>
+                    <a class="nav-link" href="/HomeNow_Final/jsp/contacto.jsp">Contacto</a>
                 </li>
             </ul>
             <ul class="navbar-nav ">
                 <li class="nav-item">
-                    <a class="nav-link" href="jsp/acceder.jsp">Acceder</a>
+                    <a class="nav-link" href="/HomeNow_Final/jsp/acceder.jsp">Acceder</a>
                 </li>  
             </ul>
           </div>
         </div>
       </nav>
+      
+      
       <!--JS y Popper-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

@@ -40,16 +40,16 @@
                     LINKS PRINCIPALES
                 </h6>
                 <p>
-                <a href="jsp/comprar.jsp" class="text-reset">Comprar</a>
+                <a href="/HomeNow_Final/jsp/comprar.jsp" class="text-reset">Comprar</a>
                 </p>
                 <p>
-                <a href="jsp/alquilar.jsp" class="text-reset">Alquilar</a>
+                <a href="/HomeNow_Final/jsp/alquilar.jsp" class="text-reset">Alquilar</a>
                 </p>
                 <p>
-                <a href="jsp/compartir.jsp" class="text-reset">Compartir</a>
+                <a href="/HomeNow_Final/jsp/compartir.jsp" class="text-reset">Compartir</a>
                 </p>
                 <p>
-                <a href="jsp/publicar.jsp" class="text-reset">Publicar</a>
+                <a href="/HomeNow_Final/jsp/publicar.jsp" class="text-reset">Publicar</a>
                 </p>
             </div>
             <!-- Grid column -->
