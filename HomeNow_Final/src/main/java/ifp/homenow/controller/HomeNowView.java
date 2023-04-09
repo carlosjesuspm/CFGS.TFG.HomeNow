@@ -19,12 +19,13 @@ public interface HomeNowView {
 	
 	
 	//Links Acceder View
-	String userRegistro=APP_CONTEXT+PAGE_FOLDER+"/userRegistro.jsp";
-	String recuperarContrasena=APP_CONTEXT+PAGE_FOLDER+"/recuperarContrasena.jsp";
-	String perfil=APP_CONTEXT+PAGE_FOLDER+"/perfil.jsp";
+	String userRegistro=PAGE_FOLDER+"/userRegistro.jsp";
+	String recuperarContrasena=PAGE_FOLDER+"/recuperarContrasena.jsp";
+	String perfil=PAGE_FOLDER+"/perfil.jsp";
 	
 	
 	//Servlets
 	String accederController=APP_CONTEXT+"/accederController";
+	String registroController=APP_CONTEXT+"/registroController";
 }
 

@@ -45,7 +45,7 @@
                                 <br>
                                 <br>
                                 <div class="text-center">
-                                    <a href="/HomeNow_Final/jsp/userRegistro.jsp">¿Aún no tienes cuenta? Regístrate</a><br>
+                                    <a href="/HomeNow_Final/registroController">¿Aún no tienes cuenta? Regístrate</a><br>
                                     <a href="/HomeNow_Final/jsp/userRegistro.jsp">Recuperar contraseña</a><br>
                                     <a href="/HomeNow_Final/jsp/perfil.jsp">Ir a perfil</a>
                                 </div>
