@@ -26,7 +26,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/HomeNow_Final/jsp/comprar.jsp">Comprar</a>
+                    <a class="nav-link" href="/HomeNow_Final/jsp/comprar.jsp" >Comprar</a>
                 </li>	
                 <li class="nav-item">
                     <a class="nav-link" href="/HomeNow_Final/jsp/compartir.jsp">Compartir</a>
@@ -46,7 +46,7 @@
             </ul>
             <ul class="navbar-nav ">
                 <li class="nav-item">
-                    <a class="nav-link" href="/HomeNow_Final/jsp/acceder.jsp">Acceder</a>
+                    <a class="nav-link" href="/HomeNow_Final/accederController">Acceder</a>
                 </li>  
             </ul>
           </div>

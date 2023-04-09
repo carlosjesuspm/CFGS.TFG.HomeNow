@@ -10,7 +10,7 @@
 		
 		<div class="card sizeDiv" style="width:40vw">
 			<div class="card-body">
-				<form id="form-register" class="pb-4">
+				<form id="form-register" method="post" class="pb-4">
 					<div class="form-group">
 						<label for="input-username">Nombre de usuario</label>
 						<input type="text" class="form-control" id="input-username"required>

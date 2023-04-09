@@ -32,7 +32,7 @@
                         <div class="col -md-6 text-center">
                             <h1 class="h4 text-gray-900 my-3">Bienvenido</h1>
                             <br>
-                            <form id="form-login ">
+                            <form id="form-login" method="post">
                                 <div class="form-group ">
                                     <input type="text" class="form-control" id="usuario" placeholder="Usuario" required>
                                 </div>
@@ -46,6 +46,7 @@
                                 <br>
                                 <div class="text-center">
                                     <a href="/HomeNow_Final/jsp/userRegistro.jsp">¿Aún no tienes cuenta? Regístrate</a><br>
+                                    <a href="/HomeNow_Final/jsp/userRegistro.jsp">Recuperar contraseña</a><br>
                                     <a href="/HomeNow_Final/jsp/perfil.jsp">Ir a perfil</a>
                                 </div>
                                 
