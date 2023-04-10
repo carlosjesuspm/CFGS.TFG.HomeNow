@@ -1,11 +1,13 @@
 package ifp.homenow.utility;
 
+import java.util.Date;
+
 public class DataValidator {
 
 	//Permite evaluar y validar los datos de los formularios
 	
 	
-	// Validar nombre 
+	// Validar nombre, campo input o cualquier string
 	public static boolean validarNombre (String value){
 		
 		String name = "^[A-Za-z ]*$";
@@ -17,10 +19,19 @@ public class DataValidator {
 	}
 	
 	
-	//Validar contraseña 
+	/*Validar contraseña
+	 * 
+	 *  Mínimo 8 caracteres
+	 *  Máximo 15
+	 *  Al menos una letra mayúscula
+	 *  Al menos una letra minúscula
+	 *  Al menos un dígito
+	 *  No espacios en blanco
+	 *  Al menos un caracter especial
+	 */
 	
 	public static boolean validarContrasena(String value) {
-		  String passregex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[\\S])[A-Za-z0-9\\S]{6,12}$";
+		  String passregex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])([A-Za-z\\d$@$!%*?&]|[^ ]){8,15}$/";
 		  if (value.matches(passregex)) {
 		    return true;
 		  } else {
@@ -54,13 +65,13 @@ public class DataValidator {
 	
 	//Validar fecha
 	
-	//public static boolean validarFecha(String val) {
-		  //Date d = null;
-		  //if (isNotNull(val)) {
-		    //d = DataUtility.getDate(val);
-		  //}
-		  //return d != null;
-		//}
+	public static boolean validarFecha(String val) {
+		  Date d = null;
+		  if (isNotNull(val)) {
+		    d = DataUtility.getDate(val);
+		  }
+		  return d != null;
+		}
 	
 	
 	// Campo null
@@ -78,6 +89,20 @@ public class DataValidator {
 	    return !isNull(val);
 	}
 	  
+	//Entero o no entero
+	public static boolean isInteger(String val) {
+		
+	    if (isNotNull(val)) {
+	      try {
+	    	  int i= Integer.parseInt(val);
+	    	  return true;
+	      } catch (NumberFormatException e) {
+	        return false;
+	      }
+	    } else {
+	      return false;
+	    }
+	  }
 	  
 	// Validar correo electrónico
 	
