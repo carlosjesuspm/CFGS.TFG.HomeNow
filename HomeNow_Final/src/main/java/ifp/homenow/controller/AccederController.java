@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ifp.homenow.utility.ServletUtility;
+
 /**
  * Servlet implementation class AccederController
  */
@@ -29,8 +31,11 @@ public class AccederController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		RequestDispatcher rd = request.getRequestDispatcher(HomeNowView.accceder);
-		rd.forward(request, response);
+		/*
+		 * RequestDispatcher rd = request.getRequestDispatcher(HomeNowView.accceder);
+		 * rd.forward(request, response);
+		*/
+		ServletUtility.forward(HomeNowView.accceder,request, response);
 	}
 
 	/**

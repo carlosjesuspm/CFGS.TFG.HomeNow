@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ifp.homenow.utility.ServletUtility;
+
 /**
  * Servlet implementation class RegistroController
  */
@@ -29,8 +31,12 @@ public class RegistroController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		RequestDispatcher rd = request.getRequestDispatcher(HomeNowView.userRegistro);
-		rd.forward(request, response);
+		/*
+		 * RequestDispatcher rd = request.getRequestDispatcher(HomeNowView.userRegistro);
+		 * rd.forward(request, response);
+		 */
+		
+		ServletUtility.forward(HomeNowView.userRegistro, request, response);
 	}
 
 	/**
