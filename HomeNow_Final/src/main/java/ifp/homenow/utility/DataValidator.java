@@ -41,6 +41,17 @@ public class DataValidator {
 	}
 	
 	
+	//Validar edad entre los 18 y 35
+	
+	public static boolean validarEdad(String value) {
+		  String regex = "^([1][8-9]|[2-5][0-9]|[3][0-5])$";
+		  if (value.matches(regex)) {
+		    return true;
+		  } else {
+		    return false;
+		  }
+	}
+	
 	//Validar fecha
 	
 	//public static boolean validarFecha(String val) {
@@ -52,7 +63,7 @@ public class DataValidator {
 		//}
 	
 	
-	// Campo null l
+	// Campo null
 	public static boolean isNull(String val) {
 	    if (val == null || val.trim().length() == 0) {
 	      return true;
@@ -82,5 +93,19 @@ public class DataValidator {
 		    return false;
 		  }
 		}
+	
+	
+	//  Validar código postal (números entre 01000-5299)
+	
+	public static boolean validarCodigoPostal(String value) {
+		  String regex = "/^(?:0?[1-9]|[1-4]\\d|5[0-2])\\d{3}$/";
+		  if (value.matches(regex)) {
+		    return true;
+		  } else {
+		    return false;
+		  }
+	}
+	
+	
 	
 }

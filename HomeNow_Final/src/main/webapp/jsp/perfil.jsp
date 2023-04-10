@@ -29,6 +29,10 @@
                             <input type="text" class="form-control" id="input-apellidos" placeholder="Apellidos" readonly>
                         </div>
                         <div class="form-group">
+                            <label for="input-apellidos">Edad</label>
+                            <input type="number" class="form-control" id="input-apellidos" placeholder="Edad" readonly>
+                        </div>
+                        <div class="form-group">
                             <label for="input-email">Email</label>
                             <input type="text" class="form-control" id="input-email" placeholder="Email" readonly>
                         </div>

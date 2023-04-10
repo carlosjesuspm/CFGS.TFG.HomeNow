@@ -34,12 +34,16 @@
 						<input type="text" class="form-control" id="input-apellidos" required>
 					</div>
 					<div class="form-group">
+						<label for="input-apellidos">Edad</label>
+						<input type="number" class="form-control" id="input-edad" required>
+					</div>
+					<div class="form-group">
 						<label for="input-apellidos">Fecha de nacimiento</label>
-						<input type="date" class="form-control" id="input-apellidos" required>
+						<input type="date" class="form-control" id="input-fechaNacimiento" required>
 					</div>
 					<div class="form-group">
 						<label for="input-apellidos">Télefono</label>
-						<input type="tel" class="form-control" id="input-apellidos" pattern="[0-9]{9}" required>
+						<input type="tel" class="form-control" id="input-telefono" required>
 					</div>
 					<div class="form-group">
 						<label for="input-email">Email</label>
