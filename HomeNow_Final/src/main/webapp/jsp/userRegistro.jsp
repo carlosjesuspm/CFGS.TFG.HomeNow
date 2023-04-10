@@ -13,7 +13,7 @@
 				<form id="form-register" method="post" class="pb-4">
 					<div class="form-group">
 						<label for="input-username">Nombre de usuario</label>
-						<input type="text" class="form-control" id="input-username"required>
+						<input type="text" class="form-control" id="input-username" required>
 					</div>
 					<div class="form-row">
 						<div class="form-group col -md-6">
@@ -34,8 +34,16 @@
 						<input type="text" class="form-control" id="input-apellidos" required>
 					</div>
 					<div class="form-group">
+						<label for="input-apellidos">Fecha de nacimiento</label>
+						<input type="date" class="form-control" id="input-apellidos" required>
+					</div>
+					<div class="form-group">
+						<label for="input-apellidos">Télefono</label>
+						<input type="tel" class="form-control" id="input-apellidos" pattern="[0-9]{9}" required>
+					</div>
+					<div class="form-group">
 						<label for="input-email">Email</label>
-						<input type="text" class="form-control" id="input-email" required>
+						<input type="email" class="form-control" id="input-email" required>
 					</div>
 					<input type="submit" class="btn btn-primary" id="register-btn" value="Registrar usuario"/>
 				</form>
