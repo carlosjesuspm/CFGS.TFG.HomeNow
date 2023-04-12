@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.util.ResourceBundle;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
-/*Interface que hereda de CommonDataSource y WrapperClass. Contiene dos métodos como 
+/* Interface que hereda de CommonDataSource y WrapperClass. Contiene dos métodos como 
  * getConnection() y getConnection(String username, String password). Se emplea como 
  * alternativa al clásico DriverManager, permitiendo establecer um pool connection.
  */
@@ -70,6 +70,19 @@ public class JDBCDataSource {
 			}
 		}
 	}
+	
+	//Método para comprobar conexión
+	/*public static void main(String[] args) {
+		JDBCDataSource jdbc = new JDBCDataSource();
+		try {
+			Connection con = jdbc.getConnection();
+			System.out.println("Conexión exitosa");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}*/
 		
 
 }
