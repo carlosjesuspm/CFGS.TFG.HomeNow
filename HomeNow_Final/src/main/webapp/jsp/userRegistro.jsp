@@ -30,8 +30,12 @@
 						<input type="text" class="form-control" id="input-nombre" required>
 					</div>
 					<div class="form-group">
-						<label for="input-apellidos">Apellidos</label>
-						<input type="text" class="form-control" id="input-apellidos" required>
+						<label for="input-apellido1">1er apellido</label>
+						<input type="text" class="form-control" id="input-apellido1" required>
+					</div>
+					<div class="form-group">
+						<label for="input-apellido2">2do apellido</label>
+						<input type="text" class="form-control" id="input-apellido2" required>
 					</div>
 					<div class="form-group">
 						<label for="input-apellidos">Edad</label>
