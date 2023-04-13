@@ -7,7 +7,7 @@ import java.util.Date;
 public class UsuarioBean {
 
 	//Atributos
-	private long id;
+	private long idusuarios;
 	private String nombre;
 	private String apellido1;
 	private String apellido2;
@@ -20,15 +20,17 @@ public class UsuarioBean {
 	
 	
 	//Getters y Setters
-	public long getId() {
-		return id;
+	
+	public long getIdusuarios() {
+		return idusuarios;
 	}
-	public void setId(long id) {
-		this.id = id;
+	public void setIdusuarios(long idusuarios) {
+		this.idusuarios = idusuarios;
 	}
 	public String getNombre() {
 		return nombre;
 	}
+	
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
