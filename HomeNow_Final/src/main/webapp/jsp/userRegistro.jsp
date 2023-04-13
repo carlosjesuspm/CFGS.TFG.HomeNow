@@ -25,8 +25,8 @@
 	<main class="p-4 d-flex justify-content-center">
 		<div class="card sizeDiv" style="width: 40vw">
 			<div class="card-body">
-				<%=ServletUtility.getSuccessMessage(request)%>
-				<%=ServletUtility.getErrorMessage(request)%>
+				<h3 style="color:green;"><%=ServletUtility.getSuccessMessage(request)%></h3>
+				<h3 style="color:red;"><%=ServletUtility.getErrorMessage(request)%></h3>
 				<form id="form-register" action="/HomeNow_Final/registroController"
 					method="post" class="pb-4">
 					<div class="form-group">
@@ -61,7 +61,7 @@
 					</div>
 					<div class="form-group">
 						<label for="input-apellidos">Fecha de nacimiento</label> <input
-							type="date" class="form-control" id="input-fechaNacimiento"
+							type="text" class="form-control" id="input-fechaNacimiento"
 							name="fecha_nacimiento" required>
 					</div>
 					<div class="form-group">

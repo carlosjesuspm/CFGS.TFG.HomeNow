@@ -17,7 +17,7 @@ public class UsuarioModel {
 		Connection conn;
 		try {
 			conn = JDBCDataSource.getConnection();
-			PreparedStatement stmt = conn.prepareStatement("select Max(id) from user");
+			PreparedStatement stmt = conn.prepareStatement("select Max(idusuarios) from usuarios");
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				pk = rs.getLong(1);
@@ -35,7 +35,7 @@ public class UsuarioModel {
 		try {
 			
 			Connection conn = JDBCDataSource.getConnection();
-			PreparedStatement stmt = conn.prepareStatement("insert into user values(?,?,?,?,?,?,?,?,?,?)");
+			PreparedStatement stmt = conn.prepareStatement("insert into usuarios values(?,?,?,?,?,?,?,?,?,?)");
 			stmt.setLong(1, nextPk());
 			stmt.setString(2, user.getNombre());
 			stmt.setString(3, user.getApellido1());
