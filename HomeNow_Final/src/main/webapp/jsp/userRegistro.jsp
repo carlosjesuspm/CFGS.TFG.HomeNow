@@ -23,12 +23,10 @@
 
 	<%@ include file="header.jsp"%>
 	<main class="p-4 d-flex justify-content-center">
-
-		<%=ServletUtility.getSuccessMessage(request)%>
-		<%=ServletUtility.getErrorMessage(request)%>
-
 		<div class="card sizeDiv" style="width: 40vw">
 			<div class="card-body">
+				<%=ServletUtility.getSuccessMessage(request)%>
+				<%=ServletUtility.getErrorMessage(request)%>
 				<form id="form-register" action="/HomeNow_Final/registroController"
 					method="post" class="pb-4">
 					<div class="form-group">
