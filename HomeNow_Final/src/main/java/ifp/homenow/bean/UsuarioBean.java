@@ -2,6 +2,8 @@ package ifp.homenow.bean;
 
 import java.util.Date;
 
+//Esta clase es el modelo base de la clase usuario
+
 public class UsuarioBean {
 
 	//Atributos
@@ -9,10 +11,12 @@ public class UsuarioBean {
 	private String nombre;
 	private String apellido1;
 	private String apellido2;
-	private int edad;
 	private Date fecha_nacimiento;
+	private int edad;
+	private String usuario;
+	private String contrasena;
 	private int telefono;
-	private String email;
+	private String correo;
 	
 	
 	//Getters y Setters
@@ -40,17 +44,29 @@ public class UsuarioBean {
 	public void setApellido2(String apellido2) {
 		this.apellido2 = apellido2;
 	}
+	public Date getFecha_nacimiento() {
+		return fecha_nacimiento;
+	}
+	public void setFecha_nacimiento(Date fecha_nacimiento) {
+		this.fecha_nacimiento = fecha_nacimiento;
+	}
 	public int getEdad() {
 		return edad;
 	}
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
-	public Date getFecha_nacimiento() {
-		return fecha_nacimiento;
+	public String getUsuario() {
+		return usuario;
 	}
-	public void setFecha_nacimiento(Date fecha_nacimiento) {
-		this.fecha_nacimiento = fecha_nacimiento;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+	public String getContrasena() {
+		return contrasena;
+	}
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
 	}
 	public int getTelefono() {
 		return telefono;
@@ -58,11 +74,19 @@ public class UsuarioBean {
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
-	public String getEmail() {
-		return email;
+	public String getCorreo() {
+		return correo;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setCorreo(String correo) {
+		this.correo = correo;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
