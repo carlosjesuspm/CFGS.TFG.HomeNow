@@ -6,16 +6,18 @@ public interface HomeNowView {
 	public final String APP_CONTEXT="/HomeNow_Final";
 	public final String PAGE_FOLDER="/jsp";
 	public final String PAGE_IMG="/img";
+	public final String PAGE_WEBINF="/WEB-INF";
 	
 	
 	// Links Header y Footer
-	String comprar=PAGE_FOLDER+"/comprar.jsp";
-	String compartir=PAGE_FOLDER+"/compartir.jsp";
-	String alquilar=PAGE_FOLDER+"/alquilar.jsp";
-	String favoritos=PAGE_FOLDER+"/favoritos.jsp";
-	String publicar=PAGE_FOLDER+"/publicar.jsp";
-	String contacto=PAGE_FOLDER+"/contacto.jsp";
+	String comprar=APP_CONTEXT+PAGE_FOLDER+"/comprar.jsp";
+	String compartir=APP_CONTEXT+PAGE_FOLDER+"/compartir.jsp";
+	String alquilar=APP_CONTEXT+PAGE_FOLDER+"/alquilar.jsp";
+	String favoritos=APP_CONTEXT+PAGE_FOLDER+"/favoritos.jsp";
+	String publicar=APP_CONTEXT+PAGE_FOLDER+"/publicar.jsp";
+	String contacto=APP_CONTEXT+PAGE_FOLDER+"/contacto.jsp";
 	String accceder=PAGE_FOLDER+"/acceder.jsp";
+	String index=APP_CONTEXT+"/index.jsp";
 	
 	
 	//Links Acceder View

@@ -1,3 +1,4 @@
+<%@page import="ifp.homenow.controller.HomeNowView"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -23,7 +24,7 @@
 
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark ">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="/HomeNow_Final/index.jsp"><img
+			<a class="navbar-brand" href="<%=HomeNowView.index %>"><img
 				src="/HomeNow_Final/img/logo.jpg" class="img-fluid"
 				alt="Logo HomeNow" width="125" height="50"></a>
 			<button class="navbar-toggler" type="button"
@@ -49,7 +50,7 @@
 				</ul>
 				<ul class="navbar-nav ">
 					<li class="nav-item"><a class="nav-link"
-						href="/HomeNow_Final/accederController">Acceder</a></li>
+						href="<%=HomeNowView.accederController%>">Acceder</a></li>
 				</ul>
 			</div>
 		</div>

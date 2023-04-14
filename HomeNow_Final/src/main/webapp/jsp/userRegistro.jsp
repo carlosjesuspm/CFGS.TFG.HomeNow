@@ -20,7 +20,6 @@
 </head>
 <body>
 
-y
 	<%@ include file="header.jsp"%>
 	<main class="p-4 d-flex justify-content-center">
 		<div class="card sizeDiv" style="width: 40vw">
