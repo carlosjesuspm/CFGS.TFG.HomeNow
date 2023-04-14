@@ -21,7 +21,7 @@
 
 </head>
 <body>
-	<%@ include file="header.jsp"%>
+	<%@ include file="headerBienvenida.jsp"%>
 	<!--Main-->
 
 	<h1 class="mt-3 padre text-center">Perfil</h1>

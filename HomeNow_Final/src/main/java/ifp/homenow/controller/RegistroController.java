@@ -68,7 +68,7 @@ public class RegistroController extends HttpServlet {
 			ServletUtility.setErrorMessage("Problema al registrar al usuario", request);
 		}
 		
-		request.getRequestDispatcher("/jsp/userRegistro.jsp").forward(request, response);
+		request.getRequestDispatcher(HomeNowView.userRegistro).forward(request, response);
 	}
 
 }

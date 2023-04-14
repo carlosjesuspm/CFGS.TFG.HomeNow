@@ -58,10 +58,10 @@ public class AccederController extends HttpServlet {
 		if (user != null) {
 			// ServletUtility.setSuccessMessage(request.getParameter("login")+ " is login
 			// successfully", request);
-			ServletUtility.redirect("jsp/welcome.jsp", request, response);
+			ServletUtility.redirect(HomeNowView.bienvenidaController, request, response);
 		} else {
-			ServletUtility.setErrorMessage("Invalid User", request);
-			ServletUtility.forward("jsp/login.jsp", request, response);
+			ServletUtility.setErrorMessage("Usuario no registrado", request);
+			ServletUtility.forward(HomeNowView.accceder, request, response);
 		}
 	}
 }

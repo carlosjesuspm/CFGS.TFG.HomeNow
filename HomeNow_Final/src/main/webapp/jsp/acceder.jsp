@@ -1,4 +1,5 @@
 <%@page import="ifp.homenow.controller.HomeNowView"%>
+<%@page import="ifp.homenow.utility.ServletUtility"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -29,6 +30,8 @@
 		<div class="container py-3">
 			<div class="card my-5">
 				<div class="card-body">
+					<h3 style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h3>
+					<h3 style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h3>
 					<div class="row m-3">
 						<div class="col -md-6 bg-login-image m-auto">
 							<img src="/HomeNow_Final/img/logo.jpg" class="img-fluid "
@@ -37,8 +40,8 @@
 						<div class="col -md-6 text-center">
 							<h1 class="h4 text-gray-900 my-3">Bienvenido</h1>
 							<br>
-							<form id="form-login"
-								action="<%=HomeNowView.accederController%>" method="post">
+							<form id="form-login" action="<%=HomeNowView.accederController%>"
+								method="post">
 								<div class="form-group ">
 									<input type="text" class="form-control" id="usuario"
 										name="usuario" placeholder="Usuario" required>
@@ -56,8 +59,7 @@
 									<a href="<%=HomeNowView.registroController%>">¿Aún no
 										tienes cuenta? Regístrate</a><br> <a
 										href="/HomeNow_Final/jsp/userRegistro.jsp">Recuperar
-										contraseña</a><br> <a href="/HomeNow_Final/jsp/perfil.jsp">Ir
-										a perfil</a>
+										contraseña</a><br>
 								</div>
 
 							</form>
