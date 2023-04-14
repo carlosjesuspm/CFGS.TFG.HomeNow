@@ -20,7 +20,7 @@ import ifp.homenow.utility.ServletUtility;
 @WebServlet(name="RegistroController", urlPatterns={"/registroController"})
 public class RegistroController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+     
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -60,6 +60,7 @@ public class RegistroController extends HttpServlet {
 		usuario.setCorreo(request.getParameter("correo"));
 		
 		long i=UsuarioModel.addUser(usuario);
+		
 		
 		if(i>0) {
 			ServletUtility.setSuccessMessage("Usuario registrado correctamente", request);

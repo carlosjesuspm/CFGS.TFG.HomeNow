@@ -20,7 +20,7 @@
 </head>
 <body>
 
-
+y
 	<%@ include file="header.jsp"%>
 	<main class="p-4 d-flex justify-content-center">
 		<div class="card sizeDiv" style="width: 40vw">
@@ -65,7 +65,7 @@
 							name="fecha_nacimiento" required>
 					</div>
 					<div class="form-group">
-						<label for="input-apellidos">Télefono</label> <input type="tel"
+						<label for="input-apellidos">Teléfono</label> <input type="tel"
 							class="form-control" id="input-telefono" name="telefono" required>
 					</div>
 					<div class="form-group">
