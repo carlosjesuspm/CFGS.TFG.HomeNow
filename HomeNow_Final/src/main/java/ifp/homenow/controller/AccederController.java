@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import ifp.homenow.utility.ServletUtility;
 import ifp.homenow.bean.UsuarioBean;
@@ -53,11 +54,12 @@ public class AccederController extends HttpServlet {
 		UsuarioBean user = new UsuarioBean();
 		String login = request.getParameter("usuario");
 		String pwd = request.getParameter("contrasena");
-
+		HttpSession session=request.getSession(true);
 		user = UsuarioModel.UserLogin(login, pwd);
 		if (user != null) {
-			// ServletUtility.setSuccessMessage(request.getParameter("login")+ " is login
-			// successfully", request);
+
+			//Set attribute for session
+			session.setAttribute("user", user.getUsuario());
 			ServletUtility.redirect(HomeNowView.bienvenidaController, request, response);
 		} else {
 			ServletUtility.setErrorMessage("Usuario no registrado", request);

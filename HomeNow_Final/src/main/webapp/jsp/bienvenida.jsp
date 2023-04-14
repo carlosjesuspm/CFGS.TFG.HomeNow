@@ -17,7 +17,7 @@
 <body>
 	<%@ include file="headerBienvenida.jsp"%>
 
-
+	<%=session.getAttribute("user") %>
 
 	<%@ include file="footer.jsp"%>
 	<!--JS y Popper-->
