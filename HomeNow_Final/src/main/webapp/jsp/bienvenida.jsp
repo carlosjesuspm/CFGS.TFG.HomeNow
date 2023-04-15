@@ -15,9 +15,8 @@
 <title>Bienvenida</title>
 </head>
 <body>
-	<%@ include file="headerBienvenida.jsp"%>
+	<%@ include file="header.jsp"%>
 
-	<%=session.getAttribute("user") %>
 
 	<%@ include file="footer.jsp"%>
 	<!--JS y Popper-->

@@ -51,6 +51,8 @@
 				<ul class="navbar-nav ">
 					<li class="nav-item"><a class="nav-link"
 						href="<%=HomeNowView.accederController%>">Acceder</a></li>
+						<li class="nav-item"><a class="nav-link"
+						href="<%=HomeNowView.accederController+"?operation=logout"%>">Cerrar Sesión</a></li>
 				</ul>
 			</div>
 		</div>

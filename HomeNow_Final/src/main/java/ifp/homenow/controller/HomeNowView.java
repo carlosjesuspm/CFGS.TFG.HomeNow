@@ -16,7 +16,7 @@ public interface HomeNowView {
 	String favoritos=PAGE_FOLDER+"/favoritos.jsp";
 	String publicar=PAGE_FOLDER+"/publicar.jsp";
 	String contacto=PAGE_FOLDER+"/contacto.jsp";
-	String accceder=PAGE_FOLDER+"/acceder.jsp";
+	String acceder=PAGE_FOLDER+"/acceder.jsp";
 	String index=APP_CONTEXT+"/index.jsp";
 	
 	
