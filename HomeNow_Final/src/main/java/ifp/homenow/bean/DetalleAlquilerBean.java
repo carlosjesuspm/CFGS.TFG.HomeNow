@@ -9,8 +9,8 @@ public class DetalleAlquilerBean {
 	private Date fecha_inicio_alquiler;
 	private Date fecha_fin_alquiler;
 	private int fianza;
-	private InmuebleBean inmueble_alq;
-	private UsuarioBean usuarios_alq;
+	private long inmueble_alq;
+	private long usuarios_alq;
 	
 	//Getters y Setters
 	public long getIddetalle_alquiler() {
@@ -37,17 +37,19 @@ public class DetalleAlquilerBean {
 	public void setFianza(int fianza) {
 		this.fianza = fianza;
 	}
-	public InmuebleBean getInmueble_alq() {
+	public long getInmueble_alq() {
 		return inmueble_alq;
 	}
-	public void setInmueble_alq(InmuebleBean inmueble_alq) {
+	public void setInmueble_alq(long inmueble_alq) {
 		this.inmueble_alq = inmueble_alq;
 	}
-	public UsuarioBean getUsuarios_alq() {
+	public long getUsuarios_alq() {
 		return usuarios_alq;
 	}
-	public void setUsuarios_alq(UsuarioBean usuarios_alq) {
+	public void setUsuarios_alq(long usuarios_alq) {
 		this.usuarios_alq = usuarios_alq;
 	}
+	
+	
 		
 }

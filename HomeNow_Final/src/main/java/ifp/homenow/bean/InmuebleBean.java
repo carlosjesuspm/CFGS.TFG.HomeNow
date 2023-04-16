@@ -7,12 +7,12 @@ public class InmuebleBean {
 	private String tipo;
 	private int precio_inmueble;
 	private int superficie;
-	private DireccionBean direccion_inmueble;
+	private long direccion_inmueble;
 	private int habitacion;
 	private int bano;
 	private String imagen_inmueble;
 	private String descripcion_inmueble;
-	private UsuarioBean usuarios_inmueble;
+	private long usuarios_inmueble;
 	
 	
 	//Getters y Setters
@@ -40,10 +40,10 @@ public class InmuebleBean {
 	public void setSuperficie(int superficie) {
 		this.superficie = superficie;
 	}
-	public DireccionBean getDireccion_inmueble() {
+	public long getDireccion_inmueble() {
 		return direccion_inmueble;
 	}
-	public void setDireccion_inmueble(DireccionBean direccion_inmueble) {
+	public void setDireccion_inmueble(long direccion_inmueble) {
 		this.direccion_inmueble = direccion_inmueble;
 	}
 	public int getHabitacion() {
@@ -70,12 +70,16 @@ public class InmuebleBean {
 	public void setDescripcion_inmueble(String descripcion_inmueble) {
 		this.descripcion_inmueble = descripcion_inmueble;
 	}
-	public UsuarioBean getUsuarios_inmueble() {
+	public long getUsuarios_inmueble() {
 		return usuarios_inmueble;
 	}
-	public void setUsuarios_inmueble(UsuarioBean usuarios_inmueble) {
+	public void setUsuarios_inmueble(long usuarios_inmueble) {
 		this.usuarios_inmueble = usuarios_inmueble;
 	}
+	
+	
+	
+	
 	
 	
 }
