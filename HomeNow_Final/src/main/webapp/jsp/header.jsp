@@ -38,7 +38,7 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<%
 				if (userSession == null) {
-				%>>
+				%>
 				<ul class="navbar-nav mx-auto">
 					<li class="nav-item"><a class="nav-link"
 						href="/HomeNow_Final/jsp/comprar.jsp">Comprar</a></li>

@@ -27,19 +27,20 @@ public class DireccionModel {
 
 	}
 	
-	public static long addDireccion(DireccionBean direccion) {
+	public static long addDireccionModel(DireccionBean direccion) {
 		int i = 0;
 		try {
 			
 			Connection conn = JDBCDataSource.getConnection();
-			PreparedStatement stmt = conn.prepareStatement("insert into direccion values(?,?,?,?,?,?,?)");
+			PreparedStatement stmt = conn.prepareStatement("insert into direccion values(?,?,?,?,?,?,?,?)");
 			stmt.setLong(1, nextPk());
 			stmt.setString(2, direccion.getProvincia());
 			stmt.setString(3, direccion.getMunicipio());
 			stmt.setString(4, direccion.getLocalidad());
 			stmt.setInt(5, direccion.getCodigo_postal());
-			stmt.setInt(6, direccion.getNumero());
-			stmt.setString(7, direccion.getComplemento());
+			stmt.setString(6, direccion.getCalle());
+			stmt.setInt(7, direccion.getNumero());
+			stmt.setString(8, direccion.getComplemento());
 
 			i = stmt.executeUpdate();
 

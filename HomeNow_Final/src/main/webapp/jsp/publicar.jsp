@@ -1,6 +1,7 @@
 <%@page import="ifp.homenow.controller.HomeNowView"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="ifp.homenow.utility.ServletUtility"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,17 +28,24 @@
 	<!--Main-->
 	<h2 class="text-center mt-3">PUBLICA TU ANUNCIO</h2>
 
+	<h3 style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h3>
+	<h3 style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h3>
+
 	<div class="container m-5">
 		<form class="">
 			<h3>Tipo de inmueble</h3>
 			<div class="mt-3 mb-3 w-25">
-				<select class="form-select" aria-label="Default select example">
+				<select class="form-select" aria-label="Default select example"
+					name="tipo">
 					<option selected value="casa">Casa</option>
 					<option value="piso">Piso</option>
 					<option value="habitacion">Habitación</option>
 				</select> <label for="superficie" class="form-label mt-3 mb-3 fw-bold ">Superficie</label>
 				<input type="text" class="form-control" id="superficie"
-					placeholder="Indique extensión">
+					placeholder="Indique extensión" name="superficie"> <label
+					for="precio" class="form-label mt-3 mb-3 fw-bold ">Precio</label> <input
+					type="text" class="form-control" id="precio"
+					placeholder="Indique precio" name="precio">
 			</div>
 
 			<br>
@@ -49,36 +57,38 @@
 					<div class="col">
 						<div class="mb-3">
 							<label for="provincia" class="form-label">Provincia</label> <input
-								type="text" class="form-control" id="provincia">
+								type="text" class="form-control" id="provincia" name="provincia">
 						</div>
 						<div class="mb-3">
 							<label for="localidad" class="form-label">Localidad</label> <input
-								type="text" class="form-control" id="localidad">
+								type="text" class="form-control" id="localidad" name="localidad">
 						</div>
 						<div class="mb-3">
 							<label for="numero" class="form-label">Número</label> <input
-								type="number" min="0" class="form-control" id="numero">
+								type="number" min="0" class="form-control" id="numero"
+								name="numero">
 						</div>
 						<div class="mb-3">
 							<label for="complemento" class="form-label ">Complemento</label>
-							<input type="text" class="form-control" id="complemento">
+							<input type="text" class="form-control" id="complemento"
+								name="complemento">
 						</div>
 					</div>
 					<div class="col">
 						<div class="mb-3">
 							<label for="municipio" class="form-label">Municipio</label> <input
-								type="text" class="form-control" id="municipio">
+								type="text" class="form-control" id="municipio" name="municipio">
 
 						</div>
 						<div class="mb-3">
 							<label for="calle" class="form-label">Calle</label> <input
-								type="text" class="form-control" id="localidad">
+								type="text" class="form-control" id="calle" name="calle">
 
 						</div>
 						<div class="mb-3">
 							<label for="codigo-postal" class="form-label">Código
 								Postal</label> <input type="number" min="1" class="form-control"
-								id="codigo-postal">
+								id="codigo-postal" name="codigo_postal">
 
 						</div>
 					</div>
@@ -87,7 +97,8 @@
 
 			<h3>Habitaciones</h3>
 			<div class="mt-3 mb-3 w-25">
-				<select class="form-select" aria-label="Default select example">
+				<select class="form-select" aria-label="Default select example"
+					name="habitacion">
 					<option selected value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -97,7 +108,8 @@
 
 			<h3>Baños</h3>
 			<div class="mt-3 mb-3 w-25">
-				<select class="form-select" aria-label="Default select example">
+				<select class="form-select" aria-label="Default select example"
+					name="bano">
 					<option selected value="1">1</option>
 					<option value="2">2</option>
 				</select>
@@ -108,13 +120,13 @@
 				<label for="formFileMultiple" class="form-label fw-bold">Seleccione
 					el conjunto de imágenes del inmueble</label> <input
 					class="form-control w-25" type="file" id="formFileMultiple"
-					multiple>
+					multiple name="imagenes">
 			</div>
 
 			<h3>Descripción</h3>
 			<div class="form-floating mt-3 mb-3 w-25">
 				<textarea class="form-control" placeholder="Leave a comment here"
-					id="floatingTextarea"></textarea>
+					id="floatingTextarea" name="descripcion"></textarea>
 				<label for="floatingTextarea">Comenta aquí</label>
 			</div>
 			<button type="submit" class="btn btn-primary">Publicar</button>

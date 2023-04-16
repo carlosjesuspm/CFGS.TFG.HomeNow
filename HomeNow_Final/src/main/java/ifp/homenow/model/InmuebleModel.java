@@ -29,7 +29,7 @@ public class InmuebleModel {
 	
 	
 
-	public static long addInmueble(InmuebleBean inmueble) {
+	public static long addInmuebleModel(InmuebleBean inmueble) {
 		int i = 0;
 		try {
 			

@@ -8,6 +8,7 @@ public class DireccionBean {
 	private String provincia;
 	private String municipio;
 	private String localidad;
+	private String calle;
 	private int codigo_postal;
 	private int numero;
 	private String complemento;
@@ -15,6 +16,12 @@ public class DireccionBean {
 	
 	//Getters y Setters
 	
+	public String getCalle() {
+		return calle;
+	}
+	public void setCalle(String calle) {
+		this.calle = calle;
+	}
 	public long getIddireccion() {
 		return iddireccion;
 	}
