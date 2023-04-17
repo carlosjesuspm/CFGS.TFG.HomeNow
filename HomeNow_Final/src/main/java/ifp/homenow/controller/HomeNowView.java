@@ -37,5 +37,6 @@ public interface HomeNowView {
 	String accederController=APP_CONTEXT+"/accederController";
 	String registroController=APP_CONTEXT+"/registroController";
 	String bienvenidaController=APP_CONTEXT+"/bienvenidaController";
+	String publicarController=APP_CONTEXT+"/publicarController";
 }
 

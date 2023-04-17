@@ -68,7 +68,7 @@
 					<li class="nav-item"><a class="nav-link"
 						href="/HomeNow_Final/jsp/favoritos.jsp">Favoritos</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/HomeNow_Final/jsp/publicar.jsp">Publicar</a></li>
+						href=<%=HomeNowView.publicarController%>>Publicar</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="/HomeNow_Final/jsp/contacto.jsp">Contacto</a></li>
 				</ul>

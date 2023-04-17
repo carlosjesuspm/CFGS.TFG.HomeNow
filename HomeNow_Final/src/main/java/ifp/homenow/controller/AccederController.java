@@ -65,7 +65,7 @@ public class AccederController extends HttpServlet {
 
 			// Set attribute for session
 			session.setAttribute("user", user.getUsuario());
-			ServletUtility.redirect(HomeNowView.bienvenidaController, request, response);
+			ServletUtility.redirect(HomeNowView.index, request, response);
 		} else {
 			ServletUtility.setErrorMessage("Usuario no registrado", request);
 			ServletUtility.forward(HomeNowView.acceder, request, response);

@@ -28,11 +28,13 @@
 	<!--Main-->
 	<h2 class="text-center mt-3">PUBLICA TU ANUNCIO</h2>
 
-	<h3 style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h3>
-	<h3 style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h3>
 
 	<div class="container m-5">
-		<form class="">
+
+		<h3 style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h3>
+		<h3 style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h3>
+		<form id="inmueble-register"
+			action="<%=HomeNowView.publicarController%>" method="post" class="">
 			<h3>Tipo de inmueble</h3>
 			<div class="mt-3 mb-3 w-25">
 				<select class="form-select" aria-label="Default select example"
@@ -41,11 +43,11 @@
 					<option value="piso">Piso</option>
 					<option value="habitacion">Habitación</option>
 				</select> <label for="superficie" class="form-label mt-3 mb-3 fw-bold ">Superficie</label>
-				<input type="text" class="form-control" id="superficie"
-					placeholder="Indique extensión" name="superficie"> <label
-					for="precio" class="form-label mt-3 mb-3 fw-bold ">Precio</label> <input
-					type="text" class="form-control" id="precio"
-					placeholder="Indique precio" name="precio">
+				<input type="number" class="form-control" id="superficie"
+					name="superficie" placeholder="Indique extensión">
+				<label for="precio" class="form-label mt-3 mb-3 fw-bold ">Precio</label>
+				<input type="number" class="form-control" id="precio" name="precio"
+					placeholder="Indique precio" name="number">
 			</div>
 
 			<br>
@@ -64,9 +66,8 @@
 								type="text" class="form-control" id="localidad" name="localidad">
 						</div>
 						<div class="mb-3">
-							<label for="numero" class="form-label">Número</label> <input
-								type="number" min="0" class="form-control" id="numero"
-								name="numero">
+							<label for="calle" class="form-label">Calle</label> <input
+								type="text" class="form-control" id="calle" name="calle">
 						</div>
 						<div class="mb-3">
 							<label for="complemento" class="form-label ">Complemento</label>
@@ -81,14 +82,15 @@
 
 						</div>
 						<div class="mb-3">
-							<label for="calle" class="form-label">Calle</label> <input
-								type="text" class="form-control" id="calle" name="calle">
-
-						</div>
-						<div class="mb-3">
 							<label for="codigo-postal" class="form-label">Código
 								Postal</label> <input type="number" min="1" class="form-control"
 								id="codigo-postal" name="codigo_postal">
+
+						</div>
+						<div class="mb-3">
+							<label for="numero" class="form-label">Número</label> <input
+								type="number" min="0" class="form-control" id="numero"
+								name="numero">
 
 						</div>
 					</div>

@@ -1,9 +1,7 @@
 package ifp.homenow.controller;
-import ifp.homenow.bean.InmuebleBean;
-import ifp.homenow.model.InmuebleModel;
-
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,11 +10,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import ifp.homenow.utility.ServletUtility;
 import ifp.homenow.bean.DireccionBean;
+import ifp.homenow.bean.InmuebleBean;
+import ifp.homenow.bean.UsuarioBean;
+
+import ifp.homenow.model.InmuebleModel;
 
 /**
  * Servlet implementation class PublicarController
  */
-@WebServlet("/PublicarController")
+@WebServlet(name="PublicarController", urlPatterns={"/publicarController"})
 public class PublicarController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -43,23 +45,20 @@ public class PublicarController extends HttpServlet {
 		// TODO Auto-generated method stub
 		InmuebleBean inmueble = new InmuebleBean();
 		DireccionBean direccion = new DireccionBean();
+		UsuarioBean usuario = new UsuarioBean();
 		
 		inmueble.setTipo(request.getParameter("tipo"));
 		inmueble.setPrecio_inmueble(Integer.parseInt(request.getParameter("precio")));
 		inmueble.setSuperficie(Integer.parseInt(request.getParameter("superficie")));
-		direccion.setProvincia(request.getParameter("provincia"));
-		direccion.setMunicipio(request.getParameter("municipio"));
-		direccion.setLocalidad(request.getParameter("localidad"));
-		direccion.setCodigo_postal(Integer.parseInt(request.getParameter("codigo_postal")));
-		direccion.setCalle(request.getParameter("calle"));
-		direccion.setNumero(Integer.parseInt(request.getParameter("numero")));
-		direccion.setComplemento(request.getParameter("complemento"));
+		inmueble.setDireccion_inmueble(direccion);
 		inmueble.setHabitacion(Integer.parseInt(request.getParameter("habitacion")));
 		inmueble.setBano(Integer.parseInt(request.getParameter("bano")));
 		inmueble.setImagen_inmueble(request.getParameter("imagenes"));
 		inmueble.setDescripcion_inmueble(request.getParameter("descripcion"));
+		inmueble.setUsuarios_inmueble(usuario);
 		
 		long i=InmuebleModel.addInmuebleModel(inmueble);
+		
 		
 		
 		if(i>0) {
