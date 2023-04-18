@@ -35,7 +35,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<%
-				if (session.getAttribute("user") == null) {
+				if (session.getAttribute("userUsuario") == null) {
 				%>
 				<ul class="navbar-nav mx-auto">
 					<li class="nav-item"><a class="nav-link"

@@ -61,15 +61,21 @@ public class AccederController extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		user = UsuarioModel.UserLogin(login, pwd);
 		if (user != null) {
-			session.setAttribute("user", user.getUsuario());
+			session.setAttribute("userUsuario", user.getUsuario());
+			session.setAttribute("userContrasena", user.getContrasena());
+			session.setAttribute("userNombre", user.getNombre());
+			session.setAttribute("userApellido1", user.getApellido1());
+			session.setAttribute("userApellido2", user.getApellido2());
+			session.setAttribute("userEdad", user.getEdad());
+			session.setAttribute("userTelefono", user.getTelefono());
+			session.setAttribute("userCorreo", user.getCorreo());
+			
 			
 			ServletUtility.redirect(HomeNowView.index, request, response);
 		} else {
 			ServletUtility.setErrorMessage("Usuario no registrado", request);
 			ServletUtility.forward(HomeNowView.acceder, request, response);
 		}
-		
-		
 		
 	}
 }

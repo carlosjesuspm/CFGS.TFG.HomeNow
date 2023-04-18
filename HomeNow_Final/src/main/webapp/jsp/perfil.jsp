@@ -32,38 +32,56 @@
 			style="height: 650px; width: 500px; align-self: center">
 			<div class="card-body">
 
-					<div class="form-group">
-						<label for="input-username">Usuario</label> <input type="text"
-							class="form-control disabled" id="input-username">
-					</div>
-					<div class="form-group">
-						<label for="input-contrasena">Contraseña</label> <input
-							type="password" class="form-control" id="input-contrasena">
-					</div>
-					<div class="form-group">
-						<label for="input-nombre">Nombre</label> <input type="text"
-							class="form-control" id="input-nombre">
-					</div>
-					<div class="form-group">
-						<label for="input-apellidos">Apellidos</label> <input type="text"
-							class="form-control" id="input-apellidos">
-					</div>
-					<div class="form-group">
-						<label for="input-edad">Edad</label> <input type="number"
-							class="form-control" id="input- edad">
-					</div>
-					<div class="form-group">
-						<label for="input-tel">Teléfono</label> <input type="number"
-							class="form-control" id="input-tel">
-					</div>
-					<div class="form-group">
-						<label for="input-email">Email</label> <input type="text"
-							class="form-control" id="input-email">
-					</div>
-					<br>
-					<button type="submit" class="btn btn-primary btn-block"
-						id="btnActualizar">Actualizar</button>
-					<br> <br> <a href="/HomeNow_Final/index.jsp">Volver</a>
+				<%
+				String usuarioUsuario = (String) session.getAttribute("userUsuario");
+				String usuarioContrasena = (String) session.getAttribute("userContrasena");
+				String usuarioNombre = (String) session.getAttribute("userNombre");
+				String usuarioApellido1 = (String) session.getAttribute("userApellido1");
+				String usuarioApellido2 = (String) session.getAttribute("userApellido2");
+				int usuarioEdad = (Integer) session.getAttribute("userEdad");
+				int usuarioTelefono = (Integer) session.getAttribute("userTelefono");
+				String usuarioCorreo = (String) session.getAttribute("userCorreo");
+				%>
+
+				<div class="form-group">
+					<label for="input-username">Usuario</label> <input type="text"
+						class="form-control disabled" id="input-username"
+						placeholder="<%out.print(usuarioUsuario);%>">
+				</div>
+				<div class="form-group">
+					<label for="input-contrasena">Contraseña</label> <input
+						type="password" class="form-control" id="input-contrasena"
+						placeholder="<%out.print(usuarioContrasena);%>">
+				</div>
+				<div class="form-group">
+					<label for="input-nombre">Nombre</label> <input type="text"
+						class="form-control" id="input-nombre"
+						placeholder="<%out.print(usuarioNombre);%>">
+				</div>
+				<div class="form-group">
+					<label for="input-apellidos">Apellidos</label> <input type="text"
+						class="form-control" id="input-apellidos"
+						placeholder="<%out.print(usuarioApellido1 + "" + usuarioApellido2);%>">
+				</div>
+				<div class="form-group">
+					<label for="input-edad">Edad</label> <input type="number"
+						class="form-control" id="input- edad"
+						placeholder="<%out.print(usuarioEdad);%>">
+				</div>
+				<div class="form-group">
+					<label for="input-tel">Teléfono</label> <input type="number"
+						class="form-control" id="input-tel"
+						placeholder="<%out.print(usuarioTelefono);%>">
+				</div>
+				<div class="form-group">
+					<label for="input-email">Email</label> <input type="text"
+						class="form-control" id="input-email"
+						placeholder="<%out.print(usuarioCorreo);%>">
+				</div>
+				<br>
+				<button type="submit" class="btn btn-primary btn-block"
+					id="btnActualizar">Actualizar</button>
+				<br> <br> <a href="/HomeNow_Final/index.jsp">Volver</a>
 			</div>
 
 		</div>
