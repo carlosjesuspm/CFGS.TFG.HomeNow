@@ -20,10 +20,10 @@
 <title>Index</title>
 
 </head>
-<%@ include file="jsp/header.jsp"%>
+
 <body>
 
-
+<%@ include file="/jsp/header.jsp"%>;
 
 
 	<!--JS y Popper-->

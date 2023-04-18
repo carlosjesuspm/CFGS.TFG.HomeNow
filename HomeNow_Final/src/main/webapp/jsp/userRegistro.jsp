@@ -72,7 +72,7 @@
 							class="form-control" id="input-email" name="correo" required>
 					</div>
 					<input type="submit" class="btn btn-primary" id="register-btn"
-						value="Registrar usuario" />
+						value="Registrar usuario" >
 				</form>
 				<div id="register-error" class="alert alert-danger d-none"
 					role="alert"></div>

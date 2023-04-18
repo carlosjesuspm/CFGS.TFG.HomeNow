@@ -19,14 +19,12 @@
 <title>Header</title>
 </head>
 <body>
-	<%
-	String userSession = (String) session.getAttribute("user");
-	%>
+
 	<!--Navbar-->
 
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark ">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="<%=HomeNowView.index%>"><img
+			<a class="navbar-brand" href="<%=HomeNowView.publicar%>"><img
 				src="/HomeNow_Final/img/logo.jpg" class="img-fluid"
 				alt="Logo HomeNow" width="125" height="50"></a>
 			<button class="navbar-toggler" type="button"
@@ -37,7 +35,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<%
-				if (userSession == null) {
+				if (session.getAttribute("user") == null) {
 				%>
 				<ul class="navbar-nav mx-auto">
 					<li class="nav-item"><a class="nav-link"

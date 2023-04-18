@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import ifp.homenow.bean.DetalleAlquilerBean;
-import ifp.homenow.bean.DireccionBean;
 import ifp.homenow.utility.JDBCDataSource;
 
 public class DetalleAlquilerModel {

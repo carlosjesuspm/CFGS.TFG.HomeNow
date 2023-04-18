@@ -21,9 +21,8 @@ public interface HomeNowView {
 	
 	
 	// Links HeaderBienvenida
-	String headerBienvenida=APP_CONTEXT+"/headerBienvenida.jsp";
-	String perfil=PAGE_FOLDER+"/perfil.jsp";
-	String bienvenida=PAGE_FOLDER+"/bienvenida.jsp";
+	String header=APP_CONTEXT+"/header.jsp";
+	String perfil=APP_CONTEXT+PAGE_FOLDER+"/perfil.jsp";
 	
 	
 	
@@ -38,5 +37,6 @@ public interface HomeNowView {
 	String registroController=APP_CONTEXT+"/registroController";
 	String bienvenidaController=APP_CONTEXT+"/bienvenidaController";
 	String publicarController=APP_CONTEXT+"/publicarController";
+	String perfilController=APP_CONTEXT+"/perfilController";
 }
 

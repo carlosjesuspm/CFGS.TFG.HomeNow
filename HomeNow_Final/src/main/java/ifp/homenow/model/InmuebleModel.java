@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 
 import ifp.homenow.bean.DireccionBean;
 import ifp.homenow.bean.InmuebleBean;
-import ifp.homenow.bean.UsuarioBean;
 import ifp.homenow.utility.JDBCDataSource;
 
 public class InmuebleModel {

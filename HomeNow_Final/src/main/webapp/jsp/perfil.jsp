@@ -1,4 +1,5 @@
 <%@page import="ifp.homenow.controller.HomeNowView"%>
+<%@page import="ifp.homenow.bean.UsuarioBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -30,43 +31,45 @@
 		<div class="tamaño hijo card my-5" id="form-container"
 			style="height: 650px; width: 500px; align-self: center">
 			<div class="card-body">
-				<form method="GET" id="form-modificar" class="pb-4">
+
 					<div class="form-group">
-						<label for="input-username">Username</label> <input type="text"
-							class="form-control disabled" id="input-username"
-							placeholder="Username" readonly>
+						<label for="input-username">Usuario</label> <input type="text"
+							class="form-control disabled" id="input-username">
 					</div>
 					<div class="form-group">
 						<label for="input-contrasena">Contraseña</label> <input
-							type="password" class="form-control" id="input-contrasena"
-							placeholder="Contraseña" readonly>
+							type="password" class="form-control" id="input-contrasena">
 					</div>
 					<div class="form-group">
 						<label for="input-nombre">Nombre</label> <input type="text"
-							class="form-control" id="input-nombre" placeholder="Nombre"
-							readonly>
+							class="form-control" id="input-nombre">
 					</div>
 					<div class="form-group">
 						<label for="input-apellidos">Apellidos</label> <input type="text"
-							class="form-control" id="input-apellidos" placeholder="Apellidos"
-							readonly>
+							class="form-control" id="input-apellidos">
 					</div>
 					<div class="form-group">
-						<label for="input-apellidos">Edad</label> <input type="number"
-							class="form-control" id="input-apellidos" placeholder="Edad"
-							readonly>
+						<label for="input-edad">Edad</label> <input type="number"
+							class="form-control" id="input- edad">
+					</div>
+					<div class="form-group">
+						<label for="input-tel">Teléfono</label> <input type="number"
+							class="form-control" id="input-tel">
 					</div>
 					<div class="form-group">
 						<label for="input-email">Email</label> <input type="text"
-							class="form-control" id="input-email" placeholder="Email"
-							readonly>
+							class="form-control" id="input-email">
 					</div>
-
-				</form>
-				<a href="/HomeNow_Final/index.jsp">Volver</a>
+					<br>
+					<button type="submit" class="btn btn-primary btn-block"
+						id="btnActualizar">Actualizar</button>
+					<br> <br> <a href="/HomeNow_Final/index.jsp">Volver</a>
 			</div>
+
 		</div>
 	</div>
+
+
 	<!--Main-->
 
 	<%@ include file="footer.jsp"%>

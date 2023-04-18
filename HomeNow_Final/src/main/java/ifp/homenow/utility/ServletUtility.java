@@ -107,12 +107,14 @@ public class ServletUtility {
 	
 	
 	//Obtener y establecer listas
+	@SuppressWarnings("rawtypes")
 	public static void setList(List list, HttpServletRequest request) {
 		request.setAttribute("list", list);
 	}
 	
 	
 	
+	@SuppressWarnings("rawtypes")
 	public static List getList(HttpServletRequest request) {
 		return (List) request.getAttribute("list");
 	}

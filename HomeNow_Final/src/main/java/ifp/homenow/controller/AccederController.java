@@ -2,7 +2,6 @@ package ifp.homenow.controller;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -62,13 +61,15 @@ public class AccederController extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		user = UsuarioModel.UserLogin(login, pwd);
 		if (user != null) {
-
-			// Set attribute for session
 			session.setAttribute("user", user.getUsuario());
+			
 			ServletUtility.redirect(HomeNowView.index, request, response);
 		} else {
 			ServletUtility.setErrorMessage("Usuario no registrado", request);
 			ServletUtility.forward(HomeNowView.acceder, request, response);
 		}
+		
+		
+		
 	}
 }
