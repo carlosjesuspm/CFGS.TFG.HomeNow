@@ -41,11 +41,7 @@
 					<li class="nav-item"><a class="nav-link"
 						href="/HomeNow_Final/jsp/comprar.jsp">Comprar</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/HomeNow_Final/jsp/compartir.jsp">Compartir</a></li>
-					<li class="nav-item"><a class="nav-link"
 						href="/HomeNow_Final/jsp/alquilar.jsp">Alquilar</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="/HomeNow_Final/jsp/favoritos.jsp">Favoritos</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="/HomeNow_Final/jsp/contacto.jsp">Contacto</a></li>
 				</ul>
@@ -60,11 +56,7 @@
 					<li class="nav-item"><a class="nav-link"
 						href="/HomeNow_Final/jsp/comprar.jsp">Comprar</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/HomeNow_Final/jsp/compartir.jsp">Compartir</a></li>
-					<li class="nav-item"><a class="nav-link"
 						href="/HomeNow_Final/jsp/alquilar.jsp">Alquilar</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="/HomeNow_Final/jsp/favoritos.jsp">Favoritos</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href=<%=HomeNowView.publicarController%>>Publicar</a></li>
 					<li class="nav-item"><a class="nav-link"

@@ -34,7 +34,7 @@
 		<h3 style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h3>
 		<h3 style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h3>
 		<form id="inmueble-register"
-			action="<%=HomeNowView.publicarController%>" method="post" class="">
+			action="<%=HomeNowView.publicarController%>" enctype="multipart/form-data" method="post" class="">
 			<h3>Tipo de inmueble</h3>
 			<div class="mt-3 mb-3 w-25">
 				<select class="form-select" aria-label="Default select example"
@@ -42,12 +42,13 @@
 					<option selected value="casa">Casa</option>
 					<option value="piso">Piso</option>
 					<option value="habitacion">Habitación</option>
-				</select> <label for="superficie" class="form-label mt-3 mb-3 fw-bold ">Superficie</label>
+				</select> 
+				<label for="superficie" class="form-label mt-3 mb-3 fw-bold ">Superficie</label>
 				<input type="number" class="form-control" id="superficie"
 					name="superficie" placeholder="Indique extensión">
 				<label for="precio" class="form-label mt-3 mb-3 fw-bold ">Precio</label>
 				<input type="number" class="form-control" id="precio" name="precio"
-					placeholder="Indique precio" name="number">
+					placeholder="Indique precio">
 			</div>
 
 			<br>
@@ -124,7 +125,7 @@
 					class="form-control w-25" type="file" id="formFileMultiple"
 					multiple name="imagenes">
 			</div>
-
+			
 			<h3>Descripción</h3>
 			<div class="form-floating mt-3 mb-3 w-25">
 				<textarea class="form-control" placeholder="Leave a comment here"

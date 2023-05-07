@@ -61,7 +61,7 @@
 				<div class="form-group">
 					<label for="input-apellidos">Apellidos</label> <input type="text"
 						class="form-control" id="input-apellidos"
-						placeholder="<%out.print(usuarioApellido1 + "" + usuarioApellido2);%>">
+						placeholder="<%out.print(usuarioApellido1 + " " + usuarioApellido2);%>">
 				</div>
 				<div class="form-group">
 					<label for="input-edad">Edad</label> <input type="number"
