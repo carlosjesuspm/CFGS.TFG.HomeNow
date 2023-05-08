@@ -52,7 +52,6 @@ public class PublicarController extends HttpServlet {
 		inmueble.setSuperficie(Integer.parseInt(request.getParameter("superficie")));
 		inmueble.setPrecio_inmueble(Integer.parseInt(request.getParameter("precio")));
 		
-		
 		direccion.setProvincia(request.getParameter("provincia"));
 		direccion.setLocalidad(request.getParameter("localidad"));
 		direccion.setCalle(request.getParameter("calle"));
@@ -66,7 +65,7 @@ public class PublicarController extends HttpServlet {
 		
 		
 		InmuebleModel.addDireccionModel(direccion);
-		long i= InmuebleModel.addInmuebleModel(inmueble, direccion, session);
+		long i= InmuebleModel.addInmuebleModel(inmueble, session);
 
 		if(i>0) {
 			ServletUtility.setSuccessMessage("Inmueble registrado correctamente", request);
