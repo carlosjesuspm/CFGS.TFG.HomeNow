@@ -14,8 +14,29 @@ public class DireccionBean {
 	private String complemento;
 	
 	
-	//Getters y Setters
 	
+	
+	public DireccionBean() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public DireccionBean(long iddireccion, String provincia, String municipio, String localidad, String calle,
+			int codigo_postal, int numero, String complemento) {
+		super();
+		this.iddireccion = iddireccion;
+		this.provincia = provincia;
+		this.municipio = municipio;
+		this.localidad = localidad;
+		this.calle = calle;
+		this.codigo_postal = codigo_postal;
+		this.numero = numero;
+		this.complemento = complemento;
+	}
+	
+	
+	//Getters y Setters
 	public String getCalle() {
 		return calle;
 	}

@@ -44,10 +44,10 @@
 					<option value="habitacion">Habitación</option>
 				</select> <label for="superficie" class="form-label mt-3 mb-3 fw-bold ">Superficie</label>
 				<input type="number" class="form-control" id="superficie"
-					name="superficie" placeholder="Indique extensión">
-				<label for="precio" class="form-label mt-3 mb-3 fw-bold ">Precio</label>
-				<input type="number" class="form-control" id="precio" name="precio"
-					placeholder="Indique precio" name="number">
+					name="superficie" placeholder="Indique extensión"> <label
+					for="precio" class="form-label mt-3 mb-3 fw-bold ">Precio</label> <input
+					type="number" class="form-control" id="precio" name="precio"
+					placeholder="Indique precio">
 			</div>
 
 			<br>
@@ -75,6 +75,7 @@
 								name="complemento">
 						</div>
 					</div>
+
 					<div class="col">
 						<div class="mb-3">
 							<label for="municipio" class="form-label">Municipio</label> <input
@@ -128,7 +129,7 @@
 			<h3>Descripción</h3>
 			<div class="form-floating mt-3 mb-3 w-25">
 				<textarea class="form-control" placeholder="Leave a comment here"
-					id="floatingTextarea" name="descripcion"></textarea>
+					id="floatingTextarea" name="descripcion" rows="5" cols="50"></textarea>
 				<label for="floatingTextarea">Comenta aquí</label>
 			</div>
 			<button type="submit" class="btn btn-primary">Publicar</button>

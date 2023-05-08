@@ -3,15 +3,18 @@ package ifp.homenow.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
 
 import ifp.homenow.bean.DireccionBean;
 import ifp.homenow.bean.InmuebleBean;
+import ifp.homenow.bean.UsuarioBean;
 import ifp.homenow.utility.JDBCDataSource;
 
 public class InmuebleModel {
 
-	
-	
 	public static long nextPk() {
 		long pk = 0;
 		Connection conn;
@@ -29,10 +32,7 @@ public class InmuebleModel {
 		return pk + 1;
 
 	}
-	
-	
-	
-	
+
 	public static long nextPkDireccion() {
 		long pk = 0;
 		Connection conn;
@@ -50,14 +50,11 @@ public class InmuebleModel {
 		return pk + 1;
 
 	}
-	
-	
-	
-	
+
 	public static long addDireccionModel(DireccionBean direccion) {
 		int i = 0;
 		try {
-			
+
 			Connection conn = JDBCDataSource.getConnection();
 			PreparedStatement stmt = conn.prepareStatement("insert into direccion values(?,?,?,?,?,?,?,?)");
 			stmt.setLong(1, nextPkDireccion());
@@ -78,27 +75,24 @@ public class InmuebleModel {
 
 		return i;
 	}
-	
-	
-	
-	
 
-	public static long addInmuebleModel(InmuebleBean inmueble) {
+	public static long addInmuebleModel(InmuebleBean inmueble, HttpSession session) {
 		int i = 0;
 		try {
-			
+
 			Connection conn = JDBCDataSource.getConnection();
 			PreparedStatement stmt = conn.prepareStatement("insert into inmueble values(?,?,?,?,?,?,?,?,?,?)");
 			stmt.setLong(1, nextPk());
 			stmt.setString(2, inmueble.getTipo());
 			stmt.setInt(3, inmueble.getPrecio_inmueble());
 			stmt.setInt(4, inmueble.getSuperficie());
-			stmt.setLong(5, inmueble.getDireccion_inmueble().getIddireccion());
+			stmt.setLong(5, nextPk());
 			stmt.setInt(6, inmueble.getHabitacion());
 			stmt.setInt(7, inmueble.getBano());
-			stmt.setString(8, inmueble.getImagen_inmueble());
-			stmt.setString(9, inmueble.getDescripcion_inmueble());
-			stmt.setLong(10, inmueble.getUsuarios_inmueble().getIdusuarios());
+			stmt.setString(8, inmueble.getDescripcion_inmueble());
+			stmt.setLong(9, (Long) session.getAttribute("userId"));
+			stmt.setBlob(10, inmueble.getImagenes_inmueble());
+			
 
 			i = stmt.executeUpdate();
 
@@ -109,4 +103,20 @@ public class InmuebleModel {
 
 		return i;
 	}
+
+	/*
+	 * public static List listaInmuebles() {
+	 * 
+	 * 
+	 * ArrayList<InmuebleBean> listaInmuebles =new ArrayList<InmuebleBean>();
+	 * Connection conn=null; try { conn=JDBCDataSource.getConnection();
+	 * PreparedStatement pstmt=conn.prepareStatement("Select * from inmueble");
+	 * ResultSet rs= pstmt.executeQuery(); while(rs.next()) { InmuebleBean inmueble=
+	 * new InmuebleBean(); inmueble.setIdinmuebles(rs.getLong("idinmuebles")); }
+	 * }catch(Exception e) { e.printStackTrace(); } finally {
+	 * JDBCDataSource.closeConnection(conn); } return listaInmuebles;
+	 * 
+	 * 
+	 * }
+	 */
 }
