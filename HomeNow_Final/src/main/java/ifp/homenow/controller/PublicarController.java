@@ -43,9 +43,7 @@ public class PublicarController extends HttpServlet {
 		
 		InmuebleBean inmueble = new InmuebleBean();
 		DireccionBean direccion = new DireccionBean();
-		UsuarioBean user = new UsuarioBean();
-		HttpSession session = request.getSession();
-		session.setAttribute("userId", user.getIdusuarios());
+		
 		
 		
 		inmueble.setTipo(request.getParameter("tipo"));
@@ -65,7 +63,7 @@ public class PublicarController extends HttpServlet {
 		
 		
 		InmuebleModel.addDireccionModel(direccion);
-		long i= InmuebleModel.addInmuebleModel(inmueble, session);
+		long i= InmuebleModel.addInmuebleModel(inmueble);
 
 		if(i>0) {
 			ServletUtility.setSuccessMessage("Inmueble registrado correctamente", request);

@@ -76,12 +76,12 @@ public class InmuebleModel {
 		return i;
 	}
 
-	public static long addInmuebleModel(InmuebleBean inmueble, HttpSession session) {
+	public static long addInmuebleModel(InmuebleBean inmueble) {
 		int i = 0;
 		try {
 
 			Connection conn = JDBCDataSource.getConnection();
-			PreparedStatement stmt = conn.prepareStatement("insert into inmueble values(?,?,?,?,?,?,?,?,?,?)");
+			PreparedStatement stmt = conn.prepareStatement("insert into inmueble values(?,?,?,?,?,?,?,?,?)");
 			stmt.setLong(1, nextPk());
 			stmt.setString(2, inmueble.getTipo());
 			stmt.setInt(3, inmueble.getPrecio_inmueble());
@@ -90,8 +90,7 @@ public class InmuebleModel {
 			stmt.setInt(6, inmueble.getHabitacion());
 			stmt.setInt(7, inmueble.getBano());
 			stmt.setString(8, inmueble.getDescripcion_inmueble());
-			stmt.setLong(9, (Long) session.getAttribute("userId"));
-			stmt.setBlob(10, inmueble.getImagenes_inmueble());
+			stmt.setBlob(9, inmueble.getImagenes_inmueble());
 			
 
 			i = stmt.executeUpdate();
