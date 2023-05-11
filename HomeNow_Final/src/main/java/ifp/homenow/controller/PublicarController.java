@@ -58,6 +58,7 @@ public class PublicarController extends HttpServlet {
 		direccion.setCodigo_postal(Integer.parseInt(request.getParameter("codigo_postal")));
 		direccion.setNumero(Integer.parseInt(request.getParameter("numero")));
 
+		inmueble.setHabitacion(Integer.parseInt(request.getParameter("habitacion")));
 		inmueble.setBano(Integer.parseInt(request.getParameter("bano")));
 		inmueble.setDescripcion_inmueble("descripcion");
 		
@@ -71,7 +72,7 @@ public class PublicarController extends HttpServlet {
 			ServletUtility.setErrorMessage("Problema al registrar el inmueble", request);
 		}
 		
-		request.getRequestDispatcher(HomeNowView.publicar).forward(request, response);
+		request.getRequestDispatcher(HomeNowView.comprar).forward(request, response);
 	}
 
 }

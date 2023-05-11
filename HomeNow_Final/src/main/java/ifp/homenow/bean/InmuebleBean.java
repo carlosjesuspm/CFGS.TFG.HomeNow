@@ -14,7 +14,7 @@ public class InmuebleBean {
 	private int bano;
 	private Blob imagenes_inmueble;
 	private String descripcion_inmueble;
-	private UsuarioBean usuarios_inmueble;
+	
 	
 	public InmuebleBean() {
 		super();
@@ -23,7 +23,7 @@ public class InmuebleBean {
 	
 	
 	public InmuebleBean(long idinmuebles, String tipo, int precio_inmueble, int superficie, DireccionBean direccion_inmueble,
-			int habitacion, int bano, Blob imagenes_inmueble, String descripcion_inmueble, UsuarioBean usuarios_inmueble) {
+			int habitacion, int bano, Blob imagenes_inmueble, String descripcion_inmueble) {
 		super();
 		this.idinmuebles = idinmuebles;
 		this.tipo = tipo;
@@ -34,7 +34,6 @@ public class InmuebleBean {
 		this.bano = bano;
 		this.imagenes_inmueble = imagenes_inmueble;
 		this.descripcion_inmueble = descripcion_inmueble;
-		this.usuarios_inmueble = usuarios_inmueble;
 	}
 
 
@@ -127,18 +126,5 @@ public class InmuebleBean {
 		this.descripcion_inmueble = descripcion_inmueble;
 	}
 
-
-	public UsuarioBean getUsuarios_inmueble() {
-		return usuarios_inmueble;
-	}
-
-
-	public void setUsuarios_inmueble(UsuarioBean usuarios_inmueble) {
-		this.usuarios_inmueble = usuarios_inmueble;
-	}
-	
-	
-
-	
 
 }

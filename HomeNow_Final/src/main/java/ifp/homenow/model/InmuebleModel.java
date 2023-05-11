@@ -90,7 +90,7 @@ public class InmuebleModel {
 			stmt.setInt(6, inmueble.getHabitacion());
 			stmt.setInt(7, inmueble.getBano());
 			stmt.setString(8, inmueble.getDescripcion_inmueble());
-			stmt.setBlob(9, inmueble.getImagenes_inmueble());
+			stmt.setLong(9, nextPk());
 			
 
 			i = stmt.executeUpdate();

@@ -61,6 +61,7 @@ public class AccederController extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		user = UsuarioModel.UserLogin(login, pwd);
 		if (user != null) {
+			
 			session.setAttribute("userUsuario", user.getUsuario());
 			session.setAttribute("userContrasena", user.getContrasena());
 			session.setAttribute("userNombre", user.getNombre());
