@@ -121,9 +121,9 @@
 			<h3>Imágenes</h3>
 			<div class="mb-3">
 				<label for="formFileMultiple" class="form-label fw-bold">Seleccione
-					el conjunto de imágenes del inmueble</label> <input
+					la imagen del inmueble</label> <input
 					class="form-control w-25" type="file" id="formFileMultiple"
-					multiple name="imagenes">
+					name="imagen">
 			</div>
 
 			<h3>Descripción</h3>

@@ -1,5 +1,6 @@
 package ifp.homenow.model;
 
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -76,7 +77,7 @@ public class InmuebleModel {
 		return i;
 	}
 
-	public static long addInmuebleModel(InmuebleBean inmueble) {
+	public static long addInmuebleModel(InmuebleBean inmueble, InputStream inputStream) {
 		int i = 0;
 		try {
 
@@ -90,9 +91,9 @@ public class InmuebleModel {
 			stmt.setInt(6, inmueble.getHabitacion());
 			stmt.setInt(7, inmueble.getBano());
 			stmt.setString(8, inmueble.getDescripcion_inmueble());
-			stmt.setLong(9, nextPk());
+			stmt.setBlob(9, inputStream);
 			
-
+6
 			i = stmt.executeUpdate();
 
 		} catch (Exception e) {

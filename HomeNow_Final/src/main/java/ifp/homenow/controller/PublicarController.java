@@ -1,21 +1,26 @@
 package ifp.homenow.controller;
+
 import ifp.homenow.bean.DireccionBean;
 import java.io.IOException;
+import java.io.InputStream;
+
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
 
 import ifp.homenow.utility.ServletUtility;
 import ifp.homenow.bean.InmuebleBean;
-import ifp.homenow.bean.UsuarioBean;
+
 import ifp.homenow.model.InmuebleModel;
 /**
  * Servlet implementation class PublicarController
  */
 @WebServlet(name = "PublicarController", urlPatterns = { "/publicarController" })
+@MultipartConfig
 public class PublicarController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -43,6 +48,9 @@ public class PublicarController extends HttpServlet {
 		
 		InmuebleBean inmueble = new InmuebleBean();
 		DireccionBean direccion = new DireccionBean();
+		InputStream inputStream =null;
+		Part part= request.getPart("imagen");
+		inputStream=part.getInputStream();
 		
 		
 		
@@ -62,9 +70,11 @@ public class PublicarController extends HttpServlet {
 		inmueble.setBano(Integer.parseInt(request.getParameter("bano")));
 		inmueble.setDescripcion_inmueble("descripcion");
 		
+
+		
 		
 		InmuebleModel.addDireccionModel(direccion);
-		long i= InmuebleModel.addInmuebleModel(inmueble);
+		long i= InmuebleModel.addInmuebleModel(inmueble, inputStream);
 
 		if(i>0) {
 			ServletUtility.setSuccessMessage("Inmueble registrado correctamente", request);
