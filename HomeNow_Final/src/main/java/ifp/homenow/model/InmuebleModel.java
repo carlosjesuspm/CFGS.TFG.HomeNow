@@ -1,17 +1,14 @@
 package ifp.homenow.model;
 
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.http.HttpSession;
-
 import ifp.homenow.bean.DireccionBean;
 import ifp.homenow.bean.InmuebleBean;
-import ifp.homenow.bean.UsuarioBean;
+
 import ifp.homenow.utility.JDBCDataSource;
 
 public class InmuebleModel {
@@ -92,7 +89,6 @@ public class InmuebleModel {
 			stmt.setInt(7, inmueble.getBano());
 			stmt.setString(8, inmueble.getDescripcion_inmueble());
 			stmt.setBlob(9, inmueble.getImagen_inmueble());
-			
 
 			i = stmt.executeUpdate();
 
@@ -104,19 +100,33 @@ public class InmuebleModel {
 		return i;
 	}
 
-	/*
-	 * public static List listaInmuebles() {
-	 * 
-	 * 
-	 * ArrayList<InmuebleBean> listaInmuebles =new ArrayList<InmuebleBean>();
-	 * Connection conn=null; try { conn=JDBCDataSource.getConnection();
-	 * PreparedStatement pstmt=conn.prepareStatement("Select * from inmueble");
-	 * ResultSet rs= pstmt.executeQuery(); while(rs.next()) { InmuebleBean inmueble=
-	 * new InmuebleBean(); inmueble.setIdinmuebles(rs.getLong("idinmuebles")); }
-	 * }catch(Exception e) { e.printStackTrace(); } finally {
-	 * JDBCDataSource.closeConnection(conn); } return listaInmuebles;
-	 * 
-	 * 
-	 * }
-	 */
+	public static ArrayList listado() {
+		ArrayList<InmuebleBean> listaInmuebles = new ArrayList<InmuebleBean>();
+		Connection conn = null;
+		try {
+			conn = JDBCDataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement("Select * from inmueble, direccion Where ");
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
+				InmuebleBean inmueble = new InmuebleBean();
+				inmueble.setIdinmuebles(rs.getLong("idinmuebles"));
+				inmueble.setTipo(rs.getString("tipo"));
+				inmueble.setPrecio_inmueble(rs.getInt("precio_inmueble"));
+				inmueble.setSuperficie(rs.getInt("superficie"));
+				//inmueble.setDireccion_inmueble(rs.));
+				inmueble.setHabitacion(rs.getInt("habitacion"));
+				inmueble.setBano(rs.getInt("bano"));
+				inmueble.setDescripcion_inmueble(rs.getString("descripcion_inmueble"));
+				inmueble.setImagen_inmueble(rs.getBlob("imagen_inmueble"));
+				listaInmuebles.add(inmueble);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			JDBCDataSource.closeConnection(conn);
+		}
+		return listaInmuebles;
+	}
+
 }
