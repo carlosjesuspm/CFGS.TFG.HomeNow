@@ -77,7 +77,7 @@ public class InmuebleModel {
 		return i;
 	}
 
-	public static long addInmuebleModel(InmuebleBean inmueble, InputStream inputStream) {
+	public static long addInmuebleModel(InmuebleBean inmueble) {
 		int i = 0;
 		try {
 
@@ -91,7 +91,7 @@ public class InmuebleModel {
 			stmt.setInt(6, inmueble.getHabitacion());
 			stmt.setInt(7, inmueble.getBano());
 			stmt.setString(8, inmueble.getDescripcion_inmueble());
-			stmt.setBlob(9, inputStream);
+			stmt.setBlob(9, inmueble.getImagen_inmueble());
 			
 
 			i = stmt.executeUpdate();
