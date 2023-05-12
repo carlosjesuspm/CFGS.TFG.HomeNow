@@ -4,7 +4,6 @@ import ifp.homenow.model.UsuarioModel;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -60,9 +59,6 @@ public class RegistroController extends HttpServlet {
 		usuario.setCorreo(request.getParameter("correo"));
 		
 		long i=UsuarioModel.addUser(usuario);
-		
-	
-		
 		
 		if(i>0) {
 			ServletUtility.setSuccessMessage("Usuario registrado correctamente", request);

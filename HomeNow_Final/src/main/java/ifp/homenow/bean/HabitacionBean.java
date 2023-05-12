@@ -5,14 +5,15 @@ public class HabitacionBean {
 	//Atributos
 	private long idhabitacion;
 	private int precio_hab;
-	private DireccionBean direccion_hab;
+	private long direccion_hab;
 	private int companeros;
 	private String imagenes_hab;
 	private String descripcion_hab;
-	private UsuarioBean usuarios_hab;
+	private long usuarios_hab;
 	
 	
 	//Getters y Setters
+	
 	public long getIdhabitacion() {
 		return idhabitacion;
 	}
@@ -25,10 +26,10 @@ public class HabitacionBean {
 	public void setPrecio_hab(int precio_hab) {
 		this.precio_hab = precio_hab;
 	}
-	public DireccionBean getDireccion_hab() {
+	public long getDireccion_hab() {
 		return direccion_hab;
 	}
-	public void setDireccion_hab(DireccionBean direccion_hab) {
+	public void setDireccion_hab(long direccion_hab) {
 		this.direccion_hab = direccion_hab;
 	}
 	public int getCompaneros() {
@@ -49,12 +50,15 @@ public class HabitacionBean {
 	public void setDescripcion_hab(String descripcion_hab) {
 		this.descripcion_hab = descripcion_hab;
 	}
-	public UsuarioBean getUsuarios_hab() {
+	public long getUsuarios_hab() {
 		return usuarios_hab;
 	}
-	public void setUsuarios_hab(UsuarioBean usuarios_hab) {
+	public void setUsuarios_hab(long usuarios_hab) {
 		this.usuarios_hab = usuarios_hab;
 	}
+	
+	
+	
 	
 	
 }
