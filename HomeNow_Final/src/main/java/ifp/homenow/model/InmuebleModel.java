@@ -93,7 +93,7 @@ public class InmuebleModel {
 			stmt.setString(8, inmueble.getDescripcion_inmueble());
 			stmt.setBlob(9, inputStream);
 			
-6
+
 			i = stmt.executeUpdate();
 
 		} catch (Exception e) {
