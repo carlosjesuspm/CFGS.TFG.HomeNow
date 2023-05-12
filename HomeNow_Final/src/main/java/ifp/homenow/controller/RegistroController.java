@@ -61,6 +61,8 @@ public class RegistroController extends HttpServlet {
 		
 		long i=UsuarioModel.addUser(usuario);
 		
+	
+		
 		
 		if(i>0) {
 			ServletUtility.setSuccessMessage("Usuario registrado correctamente", request);

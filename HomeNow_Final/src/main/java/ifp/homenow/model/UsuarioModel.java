@@ -62,7 +62,7 @@ public class UsuarioModel {
 	    UsuarioBean user = null;
 	    try {
 	      con = JDBCDataSource.getConnection();
-	      PreparedStatement stmt = con.prepareStatement("Select * from usuarios where usuario=? and contrasena = ?");
+	      PreparedStatement stmt = con.prepareStatement("Select * from usuarios where usuario =? and contrasena = ?");
 	      stmt.setString(1,usuario);
 	      stmt.setString(2,contrasena);
 	      ResultSet rs = stmt.executeQuery();
