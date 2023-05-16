@@ -3,7 +3,6 @@ package ifp.homenow.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import ifp.homenow.bean.UsuarioBean;
 import ifp.homenow.utility.JDBCDataSource;
@@ -34,7 +33,7 @@ public class UsuarioModel {
 	public static long addUser(UsuarioBean user) {
 		int i = 0;
 		try {
-
+			
 			Connection conn = JDBCDataSource.getConnection();
 			PreparedStatement stmt = conn.prepareStatement("insert into usuarios values(?,?,?,?,?,?,?,?,?,?)");
 			stmt.setLong(1, nextPk());
@@ -57,68 +56,38 @@ public class UsuarioModel {
 
 		return i;
 	}
-
-	public static UsuarioBean UserLogin(String usuario, String contrasena) {
-		Connection con;
-		UsuarioBean user = null;
-		try {
-			con = JDBCDataSource.getConnection();
-			PreparedStatement stmt = con.prepareStatement("Select * from usuarios where usuario=? and contrasena = ?");
-			stmt.setString(1, usuario);
-			stmt.setString(2, contrasena);
-			ResultSet rs = stmt.executeQuery();
-			if (rs.next()) {
-				user = new UsuarioBean();
-				user.setIdusuarios(rs.getLong("idusuarios"));
-				user.setNombre(rs.getString("nombre"));
-				user.setApellido1(rs.getString("apellido1"));
-				user.setApellido2(rs.getString("apellido2"));
-				user.setFecha_nacimiento(rs.getDate("fecha_nacimiento"));
-				user.setEdad(rs.getInt("edad"));
-				user.setUsuario(rs.getString("usuario"));
-				user.setContrasena(rs.getString("contrasena"));
-				user.setTelefono(rs.getInt("telefono"));
-				user.setCorreo(rs.getString("correo"));
-			}
-
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return user;
-	}
 	
-	public static UsuarioBean obtenerUsuario(Long idusuarios) throws SQLException {
-		Connection con;
-		UsuarioBean user = null;
-		try {
-			con = JDBCDataSource.getConnection();
-			PreparedStatement stmt = con.prepareStatement("Select * from usuarios where idusuarios=? limit 1");
-			stmt.setLong(1, idusuarios);
-			ResultSet rs = stmt.executeQuery();
-			if (rs.next()) {
-				user = new UsuarioBean();
-				user.setIdusuarios(rs.getLong("idusuarios"));
-				user.setNombre(rs.getString("nombre"));
-				user.setApellido1(rs.getString("apellido1"));
-				user.setApellido2(rs.getString("apellido2"));
-				user.setFecha_nacimiento(rs.getDate("fecha_nacimiento"));
-				user.setEdad(rs.getInt("edad"));
-				user.setUsuario(rs.getString("usuario"));
-				user.setContrasena(rs.getString("contrasena"));
-				user.setTelefono(rs.getInt("telefono"));
-				user.setCorreo(rs.getString("correo"));
-			}
-
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return user;
-	
-    }
+	public static UsuarioBean UserLogin(String usuario,String contrasena) {
+	    Connection con;
+	    UsuarioBean user = null;
+	    try {
+	      con = JDBCDataSource.getConnection();
+	      PreparedStatement stmt = con.prepareStatement("Select * from usuarios where usuario =? and contrasena = ?");
+	      stmt.setString(1,usuario);
+	      stmt.setString(2,contrasena);
+	      ResultSet rs = stmt.executeQuery();
+	      if(rs.next()) {
+	        user = new UsuarioBean();
+	        System.out.println("ID: "+rs.getLong("idusuarios"));
+	        user.setIdusuarios(rs.getLong("idusuarios"));
+	        user.setNombre(rs.getString("nombre"));
+	        user.setApellido1(rs.getString("apellido1"));
+	        user.setApellido2(rs.getString("apellido2"));
+	        user.setFecha_nacimiento(rs.getDate("fecha_nacimiento"));
+	        user.setEdad(rs.getInt("edad")); 
+	        user.setUsuario(rs.getString("usuario"));
+	        user.setContrasena(rs.getString("contrasena"));
+	        user.setTelefono(rs.getInt("telefono"));  
+	        user.setCorreo(rs.getString("correo"));
+	      }
+	      
+	    } catch (Exception e) {
+	      // TODO Auto-generated catch block
+	      e.printStackTrace();
+	    }
+	    
+	    return user;
+	  }
 	
 	
 }

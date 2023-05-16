@@ -20,14 +20,9 @@
 <title>Index</title>
 
 </head>
-
+<%@ include file="jsp/header.jsp"%>
 <body>
 
-<%@ include file="/jsp/header.jsp"%>
-<body>
-	<div class="container">
-  		<img src="img/logo.jpg" class="mx-auto d-block" style="width:25%"> 
-	</div>
 
 	<div>
 		<div class="row">

@@ -16,13 +16,14 @@ public interface HomeNowView {
 	String favoritos=PAGE_FOLDER+"/favoritos.jsp";
 	String publicar=PAGE_FOLDER+"/publicar.jsp";
 	String contacto=PAGE_FOLDER+"/contacto.jsp";
-	String acceder=PAGE_FOLDER+"/acceder.jsp";
+	String accceder=PAGE_FOLDER+"/acceder.jsp";
 	String index=APP_CONTEXT+"/index.jsp";
 	
 	
 	// Links HeaderBienvenida
-	String header=APP_CONTEXT+"/header.jsp";
-	String perfil=APP_CONTEXT+PAGE_FOLDER+"/perfil.jsp";
+	String headerBienvenida=APP_CONTEXT+"/headerBienvenida.jsp";
+	String perfil=PAGE_FOLDER+"/perfil.jsp";
+	String bienvenida=PAGE_FOLDER+"/bienvenida.jsp";
 	
 	
 	
@@ -36,8 +37,5 @@ public interface HomeNowView {
 	String accederController=APP_CONTEXT+"/accederController";
 	String registroController=APP_CONTEXT+"/registroController";
 	String bienvenidaController=APP_CONTEXT+"/bienvenidaController";
-	String publicarController=APP_CONTEXT+"/publicarController";
-	String perfilController=APP_CONTEXT+"/perfilController";
-	String listadoPisosController=APP_CONTEXT+"/listadoPisosController";
 }
 

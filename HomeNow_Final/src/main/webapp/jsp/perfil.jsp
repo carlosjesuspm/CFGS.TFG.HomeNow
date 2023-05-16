@@ -1,5 +1,4 @@
 <%@page import="ifp.homenow.controller.HomeNowView"%>
-<%@page import="ifp.homenow.bean.UsuarioBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -22,7 +21,7 @@
 
 </head>
 <body>
-	<%@ include file="header.jsp"%>
+	<%@ include file="headerBienvenida.jsp"%>
 	<!--Main-->
 
 	<h1 class="mt-3 padre text-center">Perfil</h1>
@@ -31,63 +30,43 @@
 		<div class="tamaño hijo card my-5" id="form-container"
 			style="height: 650px; width: 500px; align-self: center">
 			<div class="card-body">
+				<form method="GET" id="form-modificar" class="pb-4">
+					<div class="form-group">
+						<label for="input-username">Username</label> <input type="text"
+							class="form-control disabled" id="input-username"
+							placeholder="Username" readonly>
+					</div>
+					<div class="form-group">
+						<label for="input-contrasena">Contraseña</label> <input
+							type="password" class="form-control" id="input-contrasena"
+							placeholder="Contraseña" readonly>
+					</div>
+					<div class="form-group">
+						<label for="input-nombre">Nombre</label> <input type="text"
+							class="form-control" id="input-nombre" placeholder="Nombre"
+							readonly>
+					</div>
+					<div class="form-group">
+						<label for="input-apellidos">Apellidos</label> <input type="text"
+							class="form-control" id="input-apellidos" placeholder="Apellidos"
+							readonly>
+					</div>
+					<div class="form-group">
+						<label for="input-apellidos">Edad</label> <input type="number"
+							class="form-control" id="input-apellidos" placeholder="Edad"
+							readonly>
+					</div>
+					<div class="form-group">
+						<label for="input-email">Email</label> <input type="text"
+							class="form-control" id="input-email" placeholder="Email"
+							readonly>
+					</div>
 
-				<%
-				String usuarioUsuario = (String) session.getAttribute("userUsuario");
-				String usuarioContrasena = (String) session.getAttribute("userContrasena");
-				String usuarioNombre = (String) session.getAttribute("userNombre");
-				String usuarioApellido1 = (String) session.getAttribute("userApellido1");
-				String usuarioApellido2 = (String) session.getAttribute("userApellido2");
-				int usuarioEdad = (Integer) session.getAttribute("userEdad");
-				int usuarioTelefono = (Integer) session.getAttribute("userTelefono");
-				String usuarioCorreo = (String) session.getAttribute("userCorreo");
-				%>
-
-				<div class="form-group">
-					<label for="input-username">Usuario</label> <input type="text"
-						class="form-control disabled" id="input-username"
-						placeholder="<%out.print(usuarioUsuario);%>">
-				</div>
-				<div class="form-group">
-					<label for="input-contrasena">Contraseña</label> <input
-						type="password" class="form-control" id="input-contrasena"
-						placeholder="<%out.print(usuarioContrasena);%>">
-				</div>
-				<div class="form-group">
-					<label for="input-nombre">Nombre</label> <input type="text"
-						class="form-control" id="input-nombre"
-						placeholder="<%out.print(usuarioNombre);%>">
-				</div>
-				<div class="form-group">
-					<label for="input-apellidos">Apellidos</label> <input type="text"
-						class="form-control" id="input-apellidos"
-						placeholder="<%out.print(usuarioApellido1 + " " + usuarioApellido2);%>">
-				</div>
-				<div class="form-group">
-					<label for="input-edad">Edad</label> <input type="number"
-						class="form-control" id="input- edad"
-						placeholder="<%out.print(usuarioEdad);%>">
-				</div>
-				<div class="form-group">
-					<label for="input-tel">Teléfono</label> <input type="number"
-						class="form-control" id="input-tel"
-						placeholder="<%out.print(usuarioTelefono);%>">
-				</div>
-				<div class="form-group">
-					<label for="input-email">Email</label> <input type="text"
-						class="form-control" id="input-email"
-						placeholder="<%out.print(usuarioCorreo);%>">
-				</div>
-				<br>
-				<button type="submit" class="btn btn-primary btn-block"
-					id="btnActualizar">Actualizar</button>
-				<br> <br> <a href="/HomeNow_Final/index.jsp">Volver</a>
+				</form>
+				<a href="/HomeNow_Final/index.jsp">Volver</a>
 			</div>
-
 		</div>
 	</div>
-
-
 	<!--Main-->
 
 	<%@ include file="footer.jsp"%>
