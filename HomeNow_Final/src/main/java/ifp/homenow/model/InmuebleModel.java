@@ -3,8 +3,11 @@ package ifp.homenow.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.io.InputStream;
+import java.sql.Blob;
 import java.util.ArrayList;
-import java.util.List;
+
+
 
 import ifp.homenow.bean.DireccionBean;
 import ifp.homenow.bean.InmuebleBean;
@@ -100,25 +103,60 @@ public class InmuebleModel {
 		return i;
 	}
 
-	public static ArrayList listado() {
+	public static ArrayList<InmuebleBean> listado() {
 		ArrayList<InmuebleBean> listaInmuebles = new ArrayList<InmuebleBean>();
+		ArrayList<DireccionBean> listaDireccion = new ArrayList<DireccionBean>();
 		Connection conn = null;
 		try {
 			conn = JDBCDataSource.getConnection();
-			PreparedStatement pstmt = conn.prepareStatement("Select * from inmueble, direccion Where ");
+			PreparedStatement pstmt = conn.prepareStatement("Select idinmuebles,\r\n"
+					+ "tipo,\r\n"
+					+ "precio_inmueble,\r\n"
+					+ "superficie,\r\n"
+					+ "direccion.provincia,\r\n"
+					+ "direccion.municipio,\r\n"
+					+ "direccion.localidad,\r\n"
+					+ "direccion.codigo_postal,\r\n"
+					+ "direccion.calle,\r\n"
+					+ "direccion.numero,\r\n"
+					+ "direccion.complemento,\r\n"
+					+ "bano,\r\n"
+					+ "habitacion,\r\n"
+					+ "descripcion_inmueble,\r\n"
+					+ "imagen_inmueble\r\n"
+					+ "from inmueble Join direccion on idinmuebles=iddireccion;");
+			
+			
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				InmuebleBean inmueble = new InmuebleBean();
+				DireccionBean direccion = new DireccionBean();
+				
 				inmueble.setIdinmuebles(rs.getLong("idinmuebles"));
 				inmueble.setTipo(rs.getString("tipo"));
 				inmueble.setPrecio_inmueble(rs.getInt("precio_inmueble"));
 				inmueble.setSuperficie(rs.getInt("superficie"));
-				//inmueble.setDireccion_inmueble(rs.));
+				inmueble.setDireccion_inmueble(direccion);
 				inmueble.setHabitacion(rs.getInt("habitacion"));
 				inmueble.setBano(rs.getInt("bano"));
 				inmueble.setDescripcion_inmueble(rs.getString("descripcion_inmueble"));
-				inmueble.setImagen_inmueble(rs.getBlob("imagen_inmueble"));
+				
+				
+				
+				
+				
+				direccion.setProvincia(rs.getString("provincia"));
+				direccion.setLocalidad(rs.getString("localidad"));
+				direccion.setCalle(rs.getString("calle"));
+				direccion.setComplemento(rs.getString("complemento"));
+				direccion.setMunicipio(rs.getString("municipio"));
+				direccion.setCodigo_postal(rs.getInt("codigo_postal"));
+				direccion.setNumero(rs.getInt("numero"));
+				
+				
+				listaDireccion.add(direccion);
 				listaInmuebles.add(inmueble);
+				
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
