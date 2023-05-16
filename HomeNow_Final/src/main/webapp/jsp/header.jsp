@@ -24,7 +24,7 @@
 
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark ">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="<%=HomeNowView.publicar%>"><img
+			<a class="navbar-brand" href="<%=HomeNowView.listadoPisosController%>"><img
 				src="/HomeNow_Final/img/logo.jpg" class="img-fluid"
 				alt="Logo HomeNow" width="125" height="50"></a>
 			<button class="navbar-toggler" type="button"
