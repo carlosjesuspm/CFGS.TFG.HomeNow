@@ -1,9 +1,4 @@
 <%@page import="ifp.homenow.controller.HomeNowView"%>
-<%@page import="ifp.homenow.bean.InmuebleBean"%>
-<%@page import="ifp.homenow.utility.ServletUtility"%>
-<%@page import="java.util.Iterator"%>
-<%@page import="java.util.List"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -75,78 +70,341 @@
 	</div>
 	</div>
 
-	<h4 style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h4>
-	<h4 style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h4>
 	<div class="album py-5 bg-light">
 		<div class="container">
-			
+
 			<div class="row">
-				<c:forEach var="inmuebles" items="${listaInmuebles}">
-
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img src="<c:out value="${inmuebles.imagen_inmueble}"/>" />
-							<div class="card-body">
-								<p class="card-text">${inmuebles.tipo} en venta en
-									${inmuebles.direccion_inmueble.getMunicipio()}
-									(${inmuebles.direccion_inmueble.getProvincia()})</p>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="btn-group">
+				<div class="col-md-4">
+					<div class="card mb-4 shadow-sm">
+						<img src="../img/Casa7.jpg">
+						<div class="card-body">
+							<p class="card-text">Piso en venta en Avinguda Francesc Macia</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
 
 
-										<button type="button" class="btn btn-sm btn-outline-secondary"
-											data-toggle="modal" data-target="#myModal">
-											Características</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary"
+										data-toggle="modal" data-target="#myModal">
+										Características</button>
 
-										<div class="modal" id="myModal">
-											<div class="modal-dialog">
-												<div class="modal-content">
+									<div class="modal" id="myModal">
+										<div class="modal-dialog">
+											<div class="modal-content">
 
-													<!-- Modal Header -->
-													<div class="modal-header">
-														<h4 class="modal-title">
-															<b>${inmuebles.tipo} en venta en
-																${inmuebles.direccion_inmueble.getMunicipio()}
-																(${inmuebles.direccion_inmueble.getProvincia()})</b>
-														</h4>
-														<button type="button" class="close" data-dismiss="modal">&times;</button>
-													</div>
-
-													<!-- Modal body -->
-													<div class="modal-body">Eurofinques Assessors
-														Immobiliaris, sl, con una experiencia de mas de 40 años en
-														el sector de la construcción y promoción, ha adquirido el
-														compromiso de realizar y certificar esta promoción de 13
-														viviendas en el centro de Esparreguera, consta de planta
-														baja, primera planta, segunda planta, tercera planta y
-														duplexs, con el certificado de Eficiencia Energética de
-														nivel A o B, el más alto de los niveles de eficiencia
-														energética así determinados por la normativa vigente.
-														Fomentamos así una construcción más sostenible que
-														repercute en beneficios económicos y medioambientales.</div>
-
-													<!-- Modal footer -->
-													<div class="modal-footer">
-														<button type="button" class="btn btn-danger"
-															data-dismiss="modal">Cerrar</button>
-													</div>
-
+												<!-- Modal Header -->
+												<div class="modal-header">
+													<h4 class="modal-title">
+														<b>Piso en venta en Avinguda Francesc Macia</b>
+													</h4>
+													<button type="button" class="close" data-dismiss="modal">&times;</button>
 												</div>
+
+												<!-- Modal body -->
+												<div class="modal-body">Eurofinques Assessors
+													Immobiliaris, sl, con una experiencia de mas de 40 años en
+													el sector de la construcción y promoción, ha adquirido el
+													compromiso de realizar y certificar esta promoción de 13
+													viviendas en el centro de Esparreguera, consta de planta
+													baja, primera planta, segunda planta, tercera planta y
+													duplexs, con el certificado de Eficiencia Energética de
+													nivel A o B, el más alto de los niveles de eficiencia
+													energética así determinados por la normativa vigente.
+													Fomentamos así una construcción más sostenible que
+													repercute en beneficios económicos y medioambientales.</div>
+
+												<!-- Modal footer -->
+												<div class="modal-footer">
+													<button type="button" class="btn btn-danger"
+														data-dismiss="modal">Cerrar</button>
+												</div>
+
 											</div>
 										</div>
-
-										<button type="button" class="btn btn-sm btn-outline-secondary">
-											Precio: <b>${inmuebles.precio_inmueble} €</b>
-										</button>
-
 									</div>
+
+									<button type="button" class="btn btn-sm btn-outline-secondary">
+										Precio: <b>2749€</b>
+									</button>
+
 								</div>
 							</div>
 						</div>
 					</div>
-				</c:forEach>
+				</div>
 
-<%@ include file="footer.jsp"%>				
+				<div class="col-md-4">
+					<div class="card mb-4 shadow-sm">
+						<img src="../img/Casa2.jpg">
+						<div class="card-body">
+							<p class="card-text">Casa adosada en venta en Nucli Urbà</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary"
+										data-toggle="modal" data-target="#myModal">
+										Características</button>
+
+									<div class="modal" id="myModal">
+										<div class="modal-dialog">
+											<div class="modal-content">
+
+												<!-- Modal Header -->
+												<div class="modal-header">
+													<h4 class="modal-title">
+														<b>Piso en venta en Avinguda Francesc Macia</b>
+													</h4>
+													<button type="button" class="close" data-dismiss="modal">&times;</button>
+												</div>
+
+												<!-- Modal body -->
+												<div class="modal-body">Eurofinques Assessors
+													Immobiliaris, sl, con una experiencia de mas de 40 años en
+													el sector de la construcción y promoción, ha adquirido el
+													compromiso de realizar y certificar esta promoción de 13
+													viviendas en el centro de Esparreguera, consta de planta
+													baja, primera planta, segunda planta, tercera planta y
+													duplexs, con el certificado de Eficiencia Energética de
+													nivel A o B, el más alto de los niveles de eficiencia
+													energética así determinados por la normativa vigente.
+													Fomentamos así una construcción más sostenible que
+													repercute en beneficios económicos y medioambientales.</div>
+
+												<!-- Modal footer -->
+												<div class="modal-footer">
+													<button type="button" class="btn btn-danger"
+														data-dismiss="modal">Cerrar</button>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<button type="button" class="btn btn-sm btn-outline-secondary">
+										Precio: <b>1407,90€</b>
+									</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card mb-4 shadow-sm">
+						<img src="../img/Casa3.jpg">
+						<div class="card-body">
+							<p class="card-text">Casa adosada en venta en Carrer Europa</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary"
+										data-toggle="modal" data-target="#myModal">
+										Características</button>
+
+									<div class="modal" id="myModal">
+										<div class="modal-dialog">
+											<div class="modal-content">
+
+												<!-- Modal Header -->
+												<div class="modal-header">
+													<h4 class="modal-title">
+														<b>Piso en venta en Avinguda Francesc Macia</b>
+													</h4>
+													<button type="button" class="close" data-dismiss="modal">&times;</button>
+												</div>
+
+												<!-- Modal body -->
+												<div class="modal-body">Eurofinques Assessors
+													Immobiliaris, sl, con una experiencia de mas de 40 años en
+													el sector de la construcción y promoción, ha adquirido el
+													compromiso de realizar y certificar esta promoción de 13
+													viviendas en el centro de Esparreguera, consta de planta
+													baja, primera planta, segunda planta, tercera planta y
+													duplexs, con el certificado de Eficiencia Energética de
+													nivel A o B, el más alto de los niveles de eficiencia
+													energética así determinados por la normativa vigente.
+													Fomentamos así una construcción más sostenible que
+													repercute en beneficios económicos y medioambientales.</div>
+
+												<!-- Modal footer -->
+												<div class="modal-footer">
+													<button type="button" class="btn btn-danger"
+														data-dismiss="modal">Cerrar</button>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<button type="button" class="btn btn-sm btn-outline-secondary">
+										Precio: <b>749,90€</b>
+									</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card mb-4 shadow-sm">
+						<img src="../img/Casa4.JPG">
+						<div class="card-body">
+							<p class="card-text">Casa adosada en venta en La Plana</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary"
+										data-toggle="modal" data-target="#myModal">
+										Características</button>
+
+									<div class="modal" id="myModal">
+										<div class="modal-dialog">
+											<div class="modal-content">
+
+												<!-- Modal Header -->
+												<div class="modal-header">
+													<h4 class="modal-title">
+														<b>Piso en venta en Avinguda Francesc Macia</b>
+													</h4>
+													<button type="button" class="close" data-dismiss="modal">&times;</button>
+												</div>
+
+												<!-- Modal body -->
+												<div class="modal-body">Eurofinques Assessors
+													Immobiliaris, sl, con una experiencia de mas de 40 años en
+													el sector de la construcción y promoción, ha adquirido el
+													compromiso de realizar y certificar esta promoción de 13
+													viviendas en el centro de Esparreguera, consta de planta
+													baja, primera planta, segunda planta, tercera planta y
+													duplexs, con el certificado de Eficiencia Energética de
+													nivel A o B, el más alto de los niveles de eficiencia
+													energética así determinados por la normativa vigente.
+													Fomentamos así una construcción más sostenible que
+													repercute en beneficios económicos y medioambientales.</div>
+
+												<!-- Modal footer -->
+												<div class="modal-footer">
+													<button type="button" class="btn btn-danger"
+														data-dismiss="modal">Cerrar</button>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<button type="button" class="btn btn-sm btn-outline-secondary">
+										Precio: <b>609,90€</b>
+									</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card mb-4 shadow-sm">
+						<img src="../img/Casa5.jpg">
+						<div class="card-body">
+							<p class="card-text">Piso en venta en Avinguda de Francesc</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary"
+										data-toggle="modal" data-target="#myModal">
+										Características</button>
+
+									<div class="modal" id="myModal">
+										<div class="modal-dialog">
+											<div class="modal-content">
+
+												<!-- Modal Header -->
+												<div class="modal-header">
+													<h4 class="modal-title">
+														<b>Piso en venta en Avinguda Francesc Macia</b>
+													</h4>
+													<button type="button" class="close" data-dismiss="modal">&times;</button>
+												</div>
+
+												<!-- Modal body -->
+												<div class="modal-body">Eurofinques Assessors
+													Immobiliaris, sl, con una experiencia de mas de 40 años en
+													el sector de la construcción y promoción, ha adquirido el
+													compromiso de realizar y certificar esta promoción de 13
+													viviendas en el centro de Esparreguera, consta de planta
+													baja, primera planta, segunda planta, tercera planta y
+													duplexs, con el certificado de Eficiencia Energética de
+													nivel A o B, el más alto de los niveles de eficiencia
+													energética así determinados por la normativa vigente.
+													Fomentamos así una construcción más sostenible que
+													repercute en beneficios económicos y medioambientales.</div>
+
+												<!-- Modal footer -->
+												<div class="modal-footer">
+													<button type="button" class="btn btn-danger"
+														data-dismiss="modal">Cerrar</button>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<button type="button" class="btn btn-sm btn-outline-secondary">
+										Precio: <b>519,90€</b>
+									</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card mb-4 shadow-sm">
+						<img src="../img/Casa6.jpg">
+						<div class="card-body">
+							<p class="card-text">Piso en venta en Carrer Mestre Tomás</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary"
+										data-toggle="modal" data-target="#myModal">
+										Características</button>
+
+									<div class="modal" id="myModal">
+										<div class="modal-dialog">
+											<div class="modal-content">
+
+												<!-- Modal Header -->
+												<div class="modal-header">
+													<h4 class="modal-title">
+														<b>Piso en venta en Avinguda Francesc Macia</b>
+													</h4>
+													<button type="button" class="close" data-dismiss="modal">&times;</button>
+												</div>
+
+												<!-- Modal body -->
+												<div class="modal-body">Eurofinques Assessors
+													Immobiliaris, sl, con una experiencia de mas de 40 años en
+													el sector de la construcción y promoción, ha adquirido el
+													compromiso de realizar y certificar esta promoción de 13
+													viviendas en el centro de Esparreguera, consta de planta
+													baja, primera planta, segunda planta, tercera planta y
+													duplexs, con el certificado de Eficiencia Energética de
+													nivel A o B, el más alto de los niveles de eficiencia
+													energética así determinados por la normativa vigente.
+													Fomentamos así una construcción más sostenible que
+													repercute en beneficios económicos y medioambientales.</div>
+
+												<!-- Modal footer -->
+												<div class="modal-footer">
+													<button type="button" class="btn btn-danger"
+														data-dismiss="modal">Cerrar</button>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<button type="button" class="btn btn-sm btn-outline-secondary">
+										Precio: <b>535,90€</b>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<%@ include file="footer.jsp"%>
 </body>
-
 </html>
