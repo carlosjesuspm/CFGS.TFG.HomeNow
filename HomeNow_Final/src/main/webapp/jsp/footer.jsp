@@ -48,6 +48,9 @@
 							<a href="/HomeNow_Final/jsp/alquilar.jsp" class="text-reset">Alquilar</a>
 						</p>
 						<p>
+							<a href="/HomeNow_Final/jsp/compartir.jsp" class="text-reset">Compartir</a>
+						</p>
+						<p>
 							<a href="/HomeNow_Final/jsp/publicar.jsp" class="text-reset">Publicar</a>
 						</p>
 					</div>

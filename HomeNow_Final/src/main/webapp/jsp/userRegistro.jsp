@@ -24,8 +24,8 @@
 	<main class="p-4 d-flex justify-content-center">
 		<div class="card sizeDiv" style="width: 40vw">
 			<div class="card-body">
-				<h3 style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h3>
-				<h3 style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h3>
+				<h3 style="color:green;"><%=ServletUtility.getSuccessMessage(request)%></h3>
+				<h3 style="color:red;"><%=ServletUtility.getErrorMessage(request)%></h3>
 				<form id="form-register" action="/HomeNow_Final/registroController"
 					method="post" class="pb-4">
 					<div class="form-group">
@@ -72,7 +72,7 @@
 							class="form-control" id="input-email" name="correo" required>
 					</div>
 					<input type="submit" class="btn btn-primary" id="register-btn"
-						value="Registrar usuario" >
+						value="Registrar usuario" />
 				</form>
 				<div id="register-error" class="alert alert-danger d-none"
 					role="alert"></div>

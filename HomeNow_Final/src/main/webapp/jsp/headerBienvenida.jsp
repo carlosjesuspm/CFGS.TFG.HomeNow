@@ -51,6 +51,8 @@
 				<ul class="navbar-nav ">
 					<li class="nav-item"><a class="nav-link"
 						href="<%=HomeNowView.accederController%>">Acceder</a></li>
+						<li class="nav-item"><a class="nav-link"
+						href="/HomeNow_Final/jsp/perfil.jsp">Perfil</a></li>
 				</ul>
 			</div>
 		</div>
