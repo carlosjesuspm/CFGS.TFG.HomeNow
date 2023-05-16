@@ -61,7 +61,7 @@
 	<div>
 		<img class="mx-auto d-block rounded" src="img/collageCiudades.png" alt="Chania">
 	</div>
-	
+	 
 </body>
 
 	<!--JS y Popper-->
