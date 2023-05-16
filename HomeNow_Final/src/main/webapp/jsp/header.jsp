@@ -39,7 +39,7 @@
 				%>
 				<ul class="navbar-nav mx-auto">
 					<li class="nav-item"><a class="nav-link"
-						href="/HomeNow_Final/jsp/comprar.jsp">Comprar</a></li>
+						href="<%=HomeNowView.listadoPisosController%>">Comprar</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="/HomeNow_Final/jsp/alquilar.jsp">Alquilar</a></li>
 					<li class="nav-item"><a class="nav-link"
@@ -54,7 +54,7 @@
 				%>
 				<ul class="navbar-nav mx-auto">
 					<li class="nav-item"><a class="nav-link"
-						href="/HomeNow_Final/jsp/comprar.jsp">Comprar</a></li>
+						href="<%=HomeNowView.listadoPisosController%>">Comprar</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="/HomeNow_Final/jsp/alquilar.jsp">Alquilar</a></li>
 					<li class="nav-item"><a class="nav-link"
