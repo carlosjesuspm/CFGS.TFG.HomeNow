@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ifp.homenow.bean.InmuebleBean;
 import ifp.homenow.bean.UsuarioBean;
 /**
  * This class provides utility operation for Servlet container like forward,
@@ -125,6 +126,9 @@ public class ServletUtility {
 		return (List) request.getAttribute("list");
 	}
 	
+	public static void setInmueble(InmuebleBean inmueble, HttpServletRequest request) {
+		request.setAttribute("inmueble", inmueble);
+	}
 	
  
 }
