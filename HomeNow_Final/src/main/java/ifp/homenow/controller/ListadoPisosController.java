@@ -38,7 +38,7 @@ public class ListadoPisosController extends HttpServlet {
 		// TODO Auto-generated method stub
 		List<InmuebleBean> listaInmuebles = InmuebleModel.listado();
 		request.setAttribute("listaInmuebles", listaInmuebles);
-		RequestDispatcher dispatcher=request.getRequestDispatcher(HomeNowView.comprar);
+		RequestDispatcher dispatcher=request.getRequestDispatcher(HomeNowView.alquilar);
 		dispatcher.forward(request,response);
 	}
 

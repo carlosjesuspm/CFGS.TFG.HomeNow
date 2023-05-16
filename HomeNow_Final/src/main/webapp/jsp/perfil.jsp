@@ -79,8 +79,6 @@
 						placeholder="<%out.print(usuarioCorreo);%>">
 				</div>
 				<br>
-				<button type="submit" class="btn btn-primary btn-block"
-					id="btnActualizar">Actualizar</button>
 				<br> <br> <a href="/HomeNow_Final/index.jsp">Volver</a>
 			</div>
 

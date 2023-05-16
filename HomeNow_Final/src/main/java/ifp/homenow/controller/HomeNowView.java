@@ -10,7 +10,6 @@ public interface HomeNowView {
 	
 	
 	// Links Header y Footer
-	String comprar=PAGE_FOLDER+"/comprar.jsp";
 	String compartir=PAGE_FOLDER+"/compartir.jsp";
 	String alquilar=PAGE_FOLDER+"/alquilar.jsp";
 	String favoritos=PAGE_FOLDER+"/favoritos.jsp";
