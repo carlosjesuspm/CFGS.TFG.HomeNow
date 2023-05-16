@@ -6,6 +6,9 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import ifp.homenow.bean.InmuebleBean;
+import ifp.homenow.bean.UsuarioBean;
 /**
  * This class provides utility operation for Servlet container like forward,
  * redirect, handle generic exception=same time exception, manage success and
@@ -107,16 +110,25 @@ public class ServletUtility {
 	
 	
 	//Obtener y establecer listas
+	@SuppressWarnings("rawtypes")
 	public static void setList(List list, HttpServletRequest request) {
 		request.setAttribute("list", list);
 	}
 	
 	
+	public static void setUser(UsuarioBean usuario, HttpServletRequest request) {
+		request.setAttribute("usuario", usuario);
+	}
 	
+	
+	@SuppressWarnings("rawtypes")
 	public static List getList(HttpServletRequest request) {
 		return (List) request.getAttribute("list");
 	}
 	
+	public static void setInmueble(InmuebleBean inmueble, HttpServletRequest request) {
+		request.setAttribute("inmueble", inmueble);
+	}
 	
  
 }

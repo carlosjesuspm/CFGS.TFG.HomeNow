@@ -24,7 +24,7 @@
 
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark ">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="<%=HomeNowView.index %>"><img
+			<a class="navbar-brand" href="<%=HomeNowView.listadoPisosController%>"><img
 				src="/HomeNow_Final/img/logo.jpg" class="img-fluid"
 				alt="Logo HomeNow" width="125" height="50"></a>
 			<button class="navbar-toggler" type="button"
@@ -34,17 +34,14 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
+				<%
+				if (session.getAttribute("userUsuario") == null) {
+				%>
 				<ul class="navbar-nav mx-auto">
 					<li class="nav-item"><a class="nav-link"
-						href="/HomeNow_Final/jsp/comprar.jsp">Comprar</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="/HomeNow_Final/jsp/compartir.jsp">Compartir</a></li>
+						href="<%=HomeNowView.listadoPisosController%>">Comprar</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="/HomeNow_Final/jsp/alquilar.jsp">Alquilar</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="/HomeNow_Final/jsp/favoritos.jsp">Favoritos</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="/HomeNow_Final/jsp/publicar.jsp">Publicar</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="/HomeNow_Final/jsp/contacto.jsp">Contacto</a></li>
 				</ul>
@@ -52,6 +49,30 @@
 					<li class="nav-item"><a class="nav-link"
 						href="<%=HomeNowView.accederController%>">Acceder</a></li>
 				</ul>
+				<%
+				} else {
+				%>
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item"><a class="nav-link"
+						href="<%=HomeNowView.listadoPisosController%>">Comprar</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/HomeNow_Final/jsp/alquilar.jsp">Alquilar</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href=<%=HomeNowView.publicarController%>>Publicar</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/HomeNow_Final/jsp/contacto.jsp">Contacto</a></li>
+				</ul>
+				<ul class="navbar-nav ">
+					<li class="nav-item"><a class="nav-link"
+						href="/HomeNow_Final/jsp/perfil.jsp">Perfil</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="<%=HomeNowView.accederController + "?operation=logout"%>">Cerrar
+							Sesión</a></li>
+				</ul>
+				<%
+				}
+				%>
+
 			</div>
 		</div>
 	</nav>
