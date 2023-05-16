@@ -34,7 +34,7 @@
 		<h3 style="color: green;"><%=ServletUtility.getSuccessMessage(request)%></h3>
 		<h3 style="color: red;"><%=ServletUtility.getErrorMessage(request)%></h3>
 		<form id="inmueble-register"
-			action="<%=HomeNowView.publicarController%>" method="post" class="">
+			action="<%=HomeNowView.publicarController%>" enctype="multipart/form-data" method="post" class="">
 			<h3>Tipo de inmueble</h3>
 			<div class="mt-3 mb-3 w-25">
 				<select class="form-select" aria-label="Default select example"
@@ -121,9 +121,9 @@
 			<h3>Imágenes</h3>
 			<div class="mb-3">
 				<label for="formFileMultiple" class="form-label fw-bold">Seleccione
-					el conjunto de imágenes del inmueble</label> <input
+					la imagen del inmueble</label> <input
 					class="form-control w-25" type="file" id="formFileMultiple"
-					multiple name="imagenes">
+					name="imagen">
 			</div>
 
 			<h3>Descripción</h3>
